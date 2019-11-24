@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link href="settings.css" rel="stylesheet">
+    <title>Личный кабинет</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="page-header">
+            <img src="img/logo.png">
+            <article class="search">
+                <form class="form-search" action="" method="post">
+                    <input type="search" name="search" placeholder="Я ищу...">
+                    <button class="btn-search btn-reset" type="submit"></button>
+                </form>
+            </article>
+            <div class="padding-for-btn">
+                <button class="btn-private btn-reset" type="submit"></button>
+            </div>
+        </div>
+
+        <nav class="category">
+            <div><a class="link-reset link-category" href="#">Все товары</a></div>
+            <div><a class="link-reset link-category" href="#">Одежда</a></div>
+            <div><a class="link-reset link-category" href="#">Обувь</a></div>
+            <div><a class="link-reset link-category" href="#">Аксессуары</a></div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div id="account-name">
+                <h2>Account Name</h2>
+                <hr />
+            </div>
+            <section class="settings">
+                <aside class="left-menu">
+                    <div class="left-menu-item active"><a href="#orders">Мои заказы</a></div>
+                    <div class="left-menu-item"><a href="#settings">Настройки</a></div>
+                    <div class="left-menu-item"><a href="#category">Категории</a></div>
+                    <div class="left-menu-item"><a href="#product">Товары</a></div>
+                </aside>
+                <section class="orders">
+                    <div class="order-card">
+                        <div class="order-card-section order-card-header">
+                            <span>ID заказа 123456</span>
+                        </div>
+                        <div class="order-card-section order-card-main">
+                            <div class="row">
+                                <span>Статус</span>
+                                <span class="order-status">Оплачен</span>
+                            </div>
+                            <div class="row">
+                                <span>Дата заказа</span>
+                                <span>вторник, 12 ноября 2019 г., 22:29</span>
+                            </div>
+                            <div class="row">
+                                <span>Сумма заказа</span>
+                                <span>150 Р</span>
+                            </div>
+                        </div>
+                        <div class="order-card-section order-card-footer">
+                            <span>1 товар</span>
+                            <span hidden>&#9650;</span>
+                            <button>&#9660;</button>
+                        </div>
+                        <div class="order-card-section order-card-product">
+                            <div class="col" style="flex: 1; align-items: center;">
+                                <img src="img/product/800.jpg" alt="Товар">
+                            </div>
+                            <div class="col" style="flex: 4">
+                                <div class="row">
+                                    <span>Наименование</span>
+                                    <span>Какая-то черная фигня</span>
+                                </div>
+                                <div class="row">
+                                    <span>Количество</span>
+                                    <span>1</span>
+                                </div>
+                                <div class="row">
+                                    <span>Стоимость</span>
+                                    <span>150 Р</span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="row" style="justify-content: center;">
+                                    <span>Доставлен</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <article class="social">
+            <p class="resets-page margin-left">Наши соцсети:</p>
+            <div class="icon-social">
+                <img class="social-networks" href="#" src="img/instagram.svg">
+                <img class="social-networks" href="#" src="img/facebook.svg">
+                <img class="social-networks" href="#" src="img/telegram.svg">
+                <img class="social-networks" href="#" src="img/youtube.svg">
+            </div>
+        </article>
+        <article class="copyright">
+            <p class="resets-page padding-top-for-p">2019© ООО “YoungView”. Все права защищены.</p>
+        </article>
+    </footer>
+
+</body>
+
+</html>
