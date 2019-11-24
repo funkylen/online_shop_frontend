@@ -170,18 +170,19 @@ input[type="search"]::-webkit-search-results-decoration {
   margin-bottom: 10px;
 }
 
-.image-product img{
+.image-product img {
   width: 200px;
   height: 200px;
 } 
 
-.name-product p {
+.name-product {
   margin-bottom: 10px;
   width: 200px;
   height: 35px;
-  font-size: 15px;
   position: relative;
   text-align: center;
+  overflow: hidden;
+  font-size: 15px;
 }
 
 .price-product p {
