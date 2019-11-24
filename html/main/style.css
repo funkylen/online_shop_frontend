@@ -127,7 +127,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .indent-for-link {
   padding: 20px 20px 0 25px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .link-all-content {
@@ -139,7 +139,9 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .list-product {
-  margin-bottom: 30px;
+  padding: 5px;
+  height: 500px;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -148,7 +150,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .product {
   padding: 10px;
-  margin-bottom: 10pх;
+  margin: 20px;
   width: 220px;
   height: 300px;
   box-sizing: border-box;
@@ -187,9 +189,11 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .price-product p {
   text-align: center;
+  font-weight: bolder;
 }
 
 .btn-all-product {
+  margin-top: 180px;
   text-align: center;
 }
 
