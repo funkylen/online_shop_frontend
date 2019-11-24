@@ -168,9 +168,12 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .image-product {
   margin-bottom: 10px;
+}
+
+.image-product img{
   width: 200px;
   height: 200px;
-}
+} 
 
 .name-product p {
   margin-bottom: 10px;
