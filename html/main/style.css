@@ -186,9 +186,26 @@ input[type="search"]::-webkit-search-results-decoration {
   font-size: 15px;
 }
 
-.price-product p {
+.price-and-like-product {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.price-and-like-product p {
   text-align: center;
   font-weight: bolder;
+}
+
+.btn-like {
+  height: 16px;
+  width: 16px;
+  background: url(img/like.svg) no-repeat;
+}
+
+.btn-like:hover{
+  background: url(img/like-full.svg) no-repeat;
 }
 
 .btn-all-product {
