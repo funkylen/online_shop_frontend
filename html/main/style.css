@@ -85,8 +85,8 @@ main {
 }
 
 .content-product {
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 60px;
+  padding-right: 60px;
 }
 
 .name-product-and-like {
@@ -142,13 +142,17 @@ main {
 }
 
 .description-product {
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   max-height: 75px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   font-size: 16px;
+}
+
+.description {
+  padding-top: 10px;
 }
 
 .btn-and-link-product {
@@ -175,6 +179,10 @@ footer {
   border-radius: 3px;
   color: #fff;
   background-color: #2618B1;
+}
+
+.btn-bin:hover {
+  cursor: pointer;
 }
 
 .link-pay {
@@ -217,6 +225,10 @@ input[type="search"]::-webkit-search-results-decoration {
   background: url(img/magnifying-glass.svg) no-repeat center/80%;
 }
 
+.btn-search:hover {
+  cursor: pointer;
+}
+
 .btn-private {
   padding: 5px;
   width: 30px;
@@ -229,6 +241,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .btn-private:hover {
   box-shadow: 0 0 0 3px #2618B1;
+  cursor: pointer;
 }
 
 .category {
