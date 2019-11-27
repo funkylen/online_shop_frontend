@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link href="user_orders_empty.css" rel="stylesheet">
+    <title>Личный кабинет</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="page-header">
+            <img src="img/logo.png">
+            <article class="search">
+                <form class="form-search" action="" method="post">
+                    <input type="search" name="search" placeholder="Я ищу...">
+                    <button class="btn-search btn-reset" type="submit"></button>
+                </form>
+            </article>
+            <div class="padding-for-btn">
+                <button class="btn-private btn-reset" type="submit"></button>
+            </div>
+        </div>
+
+        <nav class="category">
+            <div><a class="link-reset link-category" href="#">Все товары</a></div>
+            <div><a class="link-reset link-category" href="#">Одежда</a></div>
+            <div><a class="link-reset link-category" href="#">Обувь</a></div>
+            <div><a class="link-reset link-category" href="#">Аксессуары</a></div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div id="account-name">
+                <h2>Account Name</h2>
+                <hr />
+            </div>
+            <section class="settings">
+                <aside class="left-menu">
+                    <div class="left-menu-item active"><a href="#orders">Мои заказы</a></div>
+                    <div class="left-menu-item"><a href="#settings">Настройки</a></div>
+                </aside>
+                <section class="orders">
+                  <span class="message-about-empty">Здесь пусто :(</span>
+                  <p class="line-height">У вас отсутствуют активные заказы.
+                    <br>
+                    Воспользуйтесь поиском, чтобы найти всё что нужно.</p>
+                    <button type="submit" class="btn-reset btn-all-products">Перейти к товарам</button>
+                    <hr />
+                    <div class="reset-page clearfix"></div>
+                    <a class="link-reset link-mainpage">Вернуться на главную</a>
+                </section>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <article class="social">
+            <p class="resets-page margin-left">Наши соцсети:</p>
+            <div class="icon-social">
+                <img class="social-networks" href="#" src="img/instagram.svg">
+                <img class="social-networks" href="#" src="img/facebook.svg">
+                <img class="social-networks" href="#" src="img/telegram.svg">
+                <img class="social-networks" href="#" src="img/youtube.svg">
+            </div>
+        </article>
+        <article class="copyright">
+            <p class="resets-page padding-top-for-p">2019© ООО “YoungView”. Все права защищены.</p>
+        </article>
+    </footer>
+
+</body>
+
+</html>

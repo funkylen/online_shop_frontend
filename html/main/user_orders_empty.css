@@ -1,0 +1,88 @@
+hr {
+    border: none;
+    display: block;
+    background-color: gray;
+    height: 1px;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.settings {
+    display: flex;
+}
+
+.left-menu {
+    width: 30%;
+}
+
+.left-menu-item {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.left-menu-item a {
+    text-decoration: none;
+    color: black
+}
+
+.left-menu-item.active {
+    font-weight: 800;
+}
+
+.orders {
+    width: 70%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.message-about-empty {
+    font-size: 32px;
+    font-weight: 700;
+    color: #a5a3a3;
+}
+
+.line-height {
+    line-height: 2rem;
+}
+
+.btn-all-products {
+  margin-bottom: 20px;
+  padding: 7px;
+  border: 1px solid #2618B1;
+  border-radius: 3px;
+  color: #fff;
+  background-color: #2618B1;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.clearfix {
+  height: 20px;
+}
+
+.link-mainpage {
+  text-decoration: underline;
+  cursor: pointer;
+  color: gray;
+}
+
+.link-mainpage:hover {
+  color: #000;
+}
