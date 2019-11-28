@@ -1,0 +1,135 @@
+.content {
+  margin: 175px 0 25px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.photo-product, .content-product {
+  padding: 40px;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border: 1px solid #000;
+  border-radius: 5px;
+  box-shadow: 3px 3px 8px rgba(0,0,0,0.25);
+}
+
+.image-photo-product {
+  background: url(img/product/product1.jpg) no-repeat;
+  background-size: contain;
+  width: 500px;
+  height: 500px;
+}
+
+.content-product {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.name-product-and-like {
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.image-like {
+  background: url(img/like.svg) no-repeat;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+}
+
+.image-like:hover {
+  background: url(img/like-full.svg) no-repeat;
+}
+
+.price-product {
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
+.size-span {
+  font-size: 20px;
+}
+
+.quantity-product {
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
+.input-quantity {
+  padding: 5px;
+  box-sizing: border-box;
+  font-size: 20px;
+  border: 1px solid #000;
+  border-radius: 3px;
+}
+
+.padding-for-span {
+  padding-top: 5px;
+}
+
+.description-product {
+  margin-bottom: 40px;
+  max-height: 75px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 16px;
+}
+
+.description {
+  padding-top: 10px;
+}
+
+.btn-and-link-product {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 20px;
+}
+
+.btn-bin {
+  padding: 5px;
+  box-sizing: border-box;
+  border: 1px solid #e43e3e;
+  border-radius: 3px;
+  color: #fff;
+  background-color: #e43e3e;
+}
+
+.btn-bin:hover {
+  background-color: #f11818;
+  cursor: pointer;
+}
+
+.link-pay {
+  padding: 5px;
+  box-sizing: border-box;
+  border: 1px solid #e43e3e;
+  border-radius: 3px;
+  color: #e43e3e;
+  font-weight: 100;
+  background-color: #fff;
+}
+
+.link-pay:hover {
+  color: #000;
+}

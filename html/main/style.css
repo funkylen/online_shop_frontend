@@ -28,6 +28,10 @@ main {
 }
 
 .btn-reset {
+  font: 20px Roboto, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
   border: none;
   outline: none;
 }
@@ -225,6 +229,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 footer {
+  margin-top: 70px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
