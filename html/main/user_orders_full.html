@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Личный кабинет</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link href="user_orders_full.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <header>
+    <article class="header">
+      <a class="link-reset" href="#oursite"><img src="img/logo.png"></a>
+      <div class="search">
+        <form class="form-search" action="" method="post">
+          <input type="search" name="search" placeholder="Я ищу...">
+          <button class="btn-reset btn-search" type="submit"></button>
+        </form>
+      </div>
+      <button class="btn-reset btn-private" type="submit"></button>
+    </article>
+
+    <nav class="category">
+      <div><a class="link-reset link-category" href="#allproduct">Все товары</a></div>
+      <div><a class="link-reset link-category" href="#clothes">Одежда</a></div>
+      <div><a class="link-reset link-category" href="#shoes">Обувь</a></div>
+      <div><a class="link-reset link-category" href="#accessories">Аксессуары</a></div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <div id="account-name">
+        <h2>Account Name</h2>
+        <hr />
+      </div>
+      <section class="settings">
+        <aside class="left-menu">
+          <div class="left-menu-item active"><a href="#orders">Мои заказы</a></div>
+          <div class="left-menu-item"><a href="#settings">Настройки</a></div>
+        </aside>
+        <section class="orders">
+          <div class="order-card">
+          <div class="order-card-section order-card-header">
+            <span>ID заказа 123456</span>
+          </div>
+          <div class="order-card-section order-card-main">
+          <div class="row">
+            <span>Статус</span>
+            <span class="order-status">Оплачен</span>
+          </div>
+          <div class="row">
+            <span>Дата заказа</span>
+            <span>вторник, 12 ноября 2019 г., 22:29</span>
+          </div>
+          <div class="row">
+            <span>Сумма заказа</span>
+            <span>150 Р</span>
+          </div>
+        </div>
+        <div class="order-card-section order-card-footer">
+          <span>1 товар</span>
+          <span hidden>&#9650;</span>
+          <button>&#9660;</button>
+          </div>
+          <div class="order-card-section order-card-product">
+            <div class="col" style="flex: 1; align-items: center;">
+              <img src="img/product/product1.jpg" alt="Товар">
+            </div>
+            <div class="col" style="flex: 4">
+            <div class="row">
+              <span>Наименование</span>
+              <span>Конструктор для детей</span>
+            </div>
+            <div class="row">
+              <span>Количество</span>
+              <span>1</span>
+            </div>
+            <div class="row">
+              <span>Стоимость</span>
+              <span>150 Р</span>
+            </div>
+          </div>
+          <div class="col">
+          <div class="row" style="justify-content: center;">
+            <span style="color:#000">Доставлен</span>
+          </div>
+        </div>
+        </div>
+        </div>
+        </section>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <article class="social">
+      <p class="reset-margin-padding padding-top-for-p">Наши соцсети:</p>
+        <a href="#"><img class="social-networks" src="img/instagram.png"></a>
+        <a href="#"><img class="social-networks" src="img/facebook.png"></a>
+        <a href="#"><img class="social-networks" src="img/telegram.svg"></a>
+        <a href="#"><img class="social-networks" src="img/youtube.png"></a>
+    </article>
+    <article>
+      <p class="reset-margin-padding padding-top-for-p">2019© ООО “YoungView”. Все права защищены.</p>
+    </article>
+  </footer>
+
+</body>
+
+</html>

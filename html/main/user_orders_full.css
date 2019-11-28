@@ -1,0 +1,117 @@
+hr {
+  border: none;
+  display: block;
+  background-color: gray;
+  height: 1px;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.settings {
+  display: flex;
+}
+
+.left-menu {
+  width: 30%;
+}
+
+.left-menu-item {
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.left-menu-item a {
+  text-decoration: none;
+  color: black
+}
+
+.left-menu-item.active {
+  font-weight: 800;
+}
+
+.orders {
+  width: 70%;
+}
+
+.order-card {
+  background-color: white;
+  margin: 20px;
+  display: block;
+  border: 1px solid gray;
+  border-radius: 3px;
+}
+
+.order-card-section {
+  border-bottom: 1px solid gray;
+}
+
+.order-card-section:last-child {
+  border-bottom: none;
+}
+
+.order-card-section .row span:first-child {
+  margin-right: 10px;
+  width: 20%;
+  color: gray;
+  padding: 10px;
+}
+
+.order-card-header {
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: rgba(0, 0, 0, 0.685);
+  color: #fff;
+}
+
+.order-card-main {
+  font-size: 14px;
+}
+
+.order-status {
+  background-color: rgb(216, 213, 213);
+  padding: 3px;
+  border-radius: 5px;
+  background-color: rgba(2, 179, 2, 0.644);
+}
+
+.order-card-footer {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  font-weight: 500;
+  background-color: rgba(0, 0, 0, 0.685);
+  color: #fff;
+}
+
+.order-card-footer button {
+  border: none;
+  background-color: white;
+}
+
+.order-card-product {
+  display: flex;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.order-card-product .col img {
+  flex: 1 1;
+  width: 100px;
+}
