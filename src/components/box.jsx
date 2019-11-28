@@ -1,10 +1,15 @@
 import React from 'react';
+import './box.css';
 
 class Box extends React.Component {
     render() {
         return (
             <div className="box">
-                <button>Click!</button>
+                <div className="button-wrapper">
+
+                    <button>Click!</button>
+
+                </div>
             </div>
         )
     }
