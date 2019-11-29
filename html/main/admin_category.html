@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link href="user_settings.css" rel="stylesheet">
+    <link href="admin_category.css" rel="stylesheet">
+    <title>Личный кабинет</title>
+</head>
+
+<body>
+
+  <header>
+    <article class="header">
+      <a class="link-reset" href="#oursite"><img src="img/logo.png"></a>
+      <div class="search">
+        <form class="form-search" action="" method="post">
+          <input type="search" name="search" placeholder="Я ищу...">
+          <button class="btn-reset btn-search" type="submit"></button>
+        </form>
+      </div>
+      <button class="btn-reset btn-private" type="submit"></button>
+    </article>
+
+    <nav class="category">
+      <div><a class="link-reset link-category" href="#allproduct">Все товары</a></div>
+      <div><a class="link-reset link-category" href="#clothes">Одежда</a></div>
+      <div><a class="link-reset link-category" href="#shoes">Обувь</a></div>
+      <div><a class="link-reset link-category" href="#accessories">Аксессуары</a></div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <div id="account-name">
+        <h2>Account Name</h2>
+        <hr />
+      </div>
+      <section class="settings">
+        <aside class="left-menu">
+          <div class="left-menu-item"><a class="link-reset active-item" href="#addcategory">Добавить категорию</a></div>
+          <div class="left-menu-item"><a class="link-reset no-active-item" href="#addproduct">Добавить товар</a></div>
+        </aside>
+        <article class="add-card">
+          <h2 class="reset-margin-padding font-like-p margin-for-h2">Добавление категории</h2>
+          <div class="add-category">
+            <label class="label-for-card">
+              Название категории
+            </label>
+            <input class="input-for-card" type="text" placeholder="Название категории">
+          </div>
+          <div>
+            <button type="submit" class="btn-reset btn-add-category">Добавить</button>
+          </div>
+        </article>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <article class="social">
+      <p class="reset-margin-padding padding-top-for-p">Наши соцсети:</p>
+        <a href="#"><img class="social-networks" src="img/instagram.png"></a>
+        <a href="#"><img class="social-networks" src="img/facebook.png"></a>
+        <a href="#"><img class="social-networks" src="img/telegram.svg"></a>
+        <a href="#"><img class="social-networks" src="img/youtube.png"></a>
+    </article>
+    <article>
+      <p class="reset-margin-padding padding-top-for-p">2019© ООО “YoungView”. Все права защищены.</p>
+    </article>
+  </footer>
+
+</body>
+
+</html>

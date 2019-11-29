@@ -1,0 +1,86 @@
+hr {
+  border: none;
+  display: block;
+  background-color: rgb(187, 187, 187);
+  height: 1px;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.settings {
+  display: flex;
+}
+
+.left-menu {
+  width: 30%;
+}
+
+.left-menu-item {
+  font-size: 20px;
+  margin: 20px 0;
+  text-decoration: none;
+}
+
+.no-active-item{
+  font-weight: 100;
+  color: rgba(158, 158, 158, 0.877);
+}
+
+.no-active-item:hover {
+  color: #000;
+}
+
+.active-item{
+  font-weight: 800;
+}
+
+.margin-for-h2 {
+  margin-bottom: 20px;
+}
+
+.add-card {
+  margin-top: 20px;
+  width: 70%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(187, 187, 187);
+  border-radius: 3px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+}
+
+.add-category {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-add-category {
+  padding: 5px;
+  box-sizing: border-box;
+  border: 1px solid #e43e3e;
+  border-radius: 3px;
+  color: #fff;
+  background-color: #e43e3e;
+}
+
+.btn-add-category:hover {
+  background-color: #f11818;
+  cursor: pointer;
+}
