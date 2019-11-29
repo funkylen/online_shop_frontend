@@ -34,14 +34,19 @@ hr {
 .left-menu-item {
   font-size: 20px;
   margin: 20px 0;
-}
-
-.left-menu-item a {
   text-decoration: none;
-  color: black
 }
 
-.left-menu-item.active {
+.no-active-item{
+  font-weight: 100;
+  color: rgba(158, 158, 158, 0.877);
+}
+
+.no-active-item:hover {
+  color: #000;
+}
+
+.active-item{
   font-weight: 800;
 }
 

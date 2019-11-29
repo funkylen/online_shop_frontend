@@ -1,0 +1,168 @@
+hr {
+  border: none;
+  display: block;
+  background-color: rgb(187, 187, 187);
+  height: 1px;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.settings {
+  display: flex;
+}
+
+.left-menu {
+  width: 30%;
+}
+
+.left-menu-item {
+  font-size: 20px;
+  margin: 20px 0;
+  text-decoration: none;
+}
+
+.no-active-item{
+  font-weight: 100;
+  color: rgba(158, 158, 158, 0.877);
+}
+
+.no-active-item:hover {
+  color: #000;
+}
+
+.active-item{
+  font-weight: 800;
+}
+
+.personal-card {
+  margin-top: 20px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(187, 187, 187);
+  border-radius: 3px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+}
+
+.font-like-p {
+  font: 18px;
+}
+
+.padding-top-for-p {
+  padding-top: 5px;
+}
+
+.FIO {
+  margin: 50px 0 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.name, .surname, .patronymic, .email {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.name, .surname {
+  margin-right: 20px;
+}
+
+.label-for-card {
+  margin-bottom: 7px;
+  font-weight: 100;
+}
+
+.input-for-card {
+  width: 215px;
+  height: 40px;
+  font-size: .875rem;
+  color: rgba(0,0,0,.87);
+  text-indent: 1rem;
+}
+
+.mail-and-mobile {
+  margin: 50px 0 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.mobile {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.gender {
+  margin: 20px 0;
+  flex: 0;
+}
+
+.female, .male {
+  padding: 5px 0;
+  width: 100px;
+  border: 1px solid rgb(187, 187, 187);
+  border-radius: 3px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.female:hover, .male:hover {
+  background-color: rgb(187, 187, 187);
+}
+
+.female {
+  margin-right: 20px;
+}
+
+.brth {
+  margin: 20px 0 30px;
+}
+
+.leave-and-save {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.btn-leave {
+  padding: 0 25px;
+  cursor: pointer;
+}
+
+.btn-leave:hover {
+  color: rgb(175, 175, 175);
+}
+
+.btn-save {
+  padding: 5px;
+  box-sizing: border-box;
+  border: 1px solid #e43e3e;
+  border-radius: 3px;
+  color: #fff;
+  background-color: #e43e3e;
+}
+
+.btn-save:hover {
+  background-color: #f11818;
+  cursor: pointer;
+}

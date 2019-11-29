@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link href="user_settings.css" rel="stylesheet">
+    <title>Личный кабинет</title>
+</head>
+
+<body>
+
+  <header>
+    <article class="header">
+      <a class="link-reset" href="#oursite"><img src="img/logo.png"></a>
+      <div class="search">
+        <form class="form-search" action="" method="post">
+          <input type="search" name="search" placeholder="Я ищу...">
+          <button class="btn-reset btn-search" type="submit"></button>
+        </form>
+      </div>
+      <button class="btn-reset btn-private" type="submit"></button>
+    </article>
+
+    <nav class="category">
+      <div><a class="link-reset link-category" href="#allproduct">Все товары</a></div>
+      <div><a class="link-reset link-category" href="#clothes">Одежда</a></div>
+      <div><a class="link-reset link-category" href="#shoes">Обувь</a></div>
+      <div><a class="link-reset link-category" href="#accessories">Аксессуары</a></div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <div id="account-name">
+        <h2>Account Name</h2>
+        <hr />
+      </div>
+      <section class="settings">
+        <aside class="left-menu">
+          <div class="left-menu-item"><a class="link-reset no-active-item" href="#orders">Мои заказы</a></div>
+          <div class="left-menu-item"><a class="link-reset active-item" href="#settings">Настройки</a></div>
+        </aside>
+        <article class="personal-card">
+          <h2 class="reset-margin-padding font-like-p">Мои данные</h2>
+          <div class="FIO">
+            <div class="surname">
+              <label class="label-for-card">
+                Фамилия
+              </label>
+              <input class="input-for-card" type="text" autocomplete="on" placeholder="Фамилия">
+            </div>
+            <div class="name">
+              <label class="label-for-card">
+                Имя
+              </label>
+              <input class="input-for-card" type="text" autocomplete="on" placeholder="Имя">
+            </div>
+            <div class="patronymic">
+              <label class="label-for-card">
+                Отчество
+              </label>
+              <input class="input-for-card last-margin" type="text" autocomplete="on" placeholder="Отчество">
+            </div>
+          </div>
+          <div>
+            <hr />
+          </div>
+          <div class="mail-and-mobile">
+              <div class="email">
+                <label class="label-for-card">
+                  Электронная почта
+                </label>
+                <input class="input-for-card" type="email" autocomplete="on" placeholder="example@mail.ru">
+              </div>
+              <div class="mobile">
+                <label class="label-for-card">
+                  Номер телефона
+                </label>
+                <input class="input-for-card" type="tel" autocomplete="on" placeholder="+7 (987) 666-55-44">
+              </div>
+            </div>
+            <div>
+              <hr />
+          </div>
+          <div class="col gender">
+            <label class="label-for-card">
+              Пол
+            </label>
+            <div class="row">
+              <div class="female">Женский</div>
+              <div class="male">Мужской</div>
+            </div>
+          </div>
+          <div class="col brth">
+            <label class="label-for-card">
+              Дата рождения
+            </label>
+            <input class="input-for-card" type="datepicker" minlength="10" maxlength="10" placeholder="дд.мм.гггг"> 
+          </div>
+          <div class="leave-and-save">
+            <div>
+              <button class="btn-reset btn-leave">Выйти из системы</button>
+            </div>
+            <div>
+              <button class="btn-reset btn-save">Сохранить</button>
+            </div>
+          </div>
+        </article>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <article class="social">
+      <p class="reset-margin-padding padding-top-for-p">Наши соцсети:</p>
+        <a href="#"><img class="social-networks" src="img/instagram.png"></a>
+        <a href="#"><img class="social-networks" src="img/facebook.png"></a>
+        <a href="#"><img class="social-networks" src="img/telegram.svg"></a>
+        <a href="#"><img class="social-networks" src="img/youtube.png"></a>
+    </article>
+    <article>
+      <p class="reset-margin-padding padding-top-for-p">2019© ООО “YoungView”. Все права защищены.</p>
+    </article>
+  </footer>
+
+</body>
+
+</html>
