@@ -2,15 +2,19 @@ import React from 'react';
 import './box.css';
 
 class Box extends React.Component {
+    style = {
+        
+    }
+
     render() {
         return (
-            <div className="box">
+            <main style={{backgroundColor: `${this.props.color}`}} className="box">
                 <div className="button-wrapper">
 
-                    <button>Click!</button>
+                    <button onClick={this.props.handleClick}>Click!</button>
 
                 </div>
-            </div>
+            </main>
         )
     }
 }
