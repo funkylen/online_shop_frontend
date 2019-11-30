@@ -1,14 +1,9 @@
-import React,{Fragment} from 'react';
+import React from 'react';
+import Index from './Main/Index';
 
 class Main extends React.Component {
     render() {
-        return (
-            <main>
-                <div className="container">
-                    Main Content
-                </div>
-            </main>
-        )
+        return <Index />
     }
 }
 
