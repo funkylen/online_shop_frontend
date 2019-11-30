@@ -10,7 +10,7 @@ class Header extends React.Component {
 		let categories = [];
 
 		for (let i = 0; i < 10; i++) {
-			categories.push(<Category />);
+			categories.push(<Category key={`category_${i}`} />);
 		}
 
 		return categories;
@@ -19,20 +19,20 @@ class Header extends React.Component {
 	render() {
 		return (
 			<header>
-				<nav class="navbar navbar-expand-lg navbar-light bg-light">
+				<nav className="navbar navbar-expand-lg navbar-light bg-light">
 					<div className="container">
-						<a class="navbar-brand" href="#">
+						<a className="navbar-brand" href="#">
 							<img src={logo} alt="Лого" />
 						</a>
 
-						<form class="form-inline my-2 my-lg-0">
+						<form className="form-inline my-2 my-lg-0">
 							<input
-								class="form-control mr-sm-2"
+								className="form-control mr-sm-2"
 								type="search"
 								placeholder="Поиск по товарам"
 								aria-label="Search"
 							/>
-							<button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+							<button className="btn btn-outline-success my-2 my-sm-0" type="submit">
 								Поиск
 							</button>
 						</form>
@@ -40,10 +40,10 @@ class Header extends React.Component {
 					</div>
 				</nav>
 
-				<nav class="navbar navbar-expand-lg navbar-light bg-light">
+				<nav className="navbar navbar-expand-lg navbar-light bg-light">
 					<div className="container">
 						<button
-							class="navbar-toggler"
+							className="navbar-toggler"
 							type="button"
 							data-toggle="collapse"
 							data-target="#navbarSupportedContent"
@@ -51,11 +51,11 @@ class Header extends React.Component {
 							aria-expanded="false"
 							aria-label="Toggle navigation"
 						>
-							<span class="navbar-toggler-icon" />
+							<span className="navbar-toggler-icon" />
 						</button>
 
-						<div class="collapse navbar-collapse" id="navbarSupportedContent">
-							<ul class="navbar-nav mr-auto">
+						<div className="collapse navbar-collapse" id="navbarSupportedContent">
+							<ul className="navbar-nav mr-auto">
 								{this.getCategories()}
 								<DropdownCategory />
 							</ul>

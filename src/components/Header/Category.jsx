@@ -1,8 +1,8 @@
 import React from 'react';
 
 const Category = ({ active }) => (
-	<li class={`nav-item${active ? ' active' : ''}`}>
-		<a class="nav-link" href="#">
+	<li className={`nav-item${active ? ' active' : ''}`}>
+		<a className="nav-link" href="#">
 			Категория
 		</a>
 	</li>

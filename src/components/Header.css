@@ -1,6 +1,4 @@
 header {
-	background-color: rgba(220, 220, 220, 0.850);
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25), 0 3px 10px rgba(0, 0, 0, 0.22);
-	text-align: center;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25), 0 3px 10px rgba(0, 0, 0, 0.22);
 	margin-bottom: 30px;
 }

@@ -3,9 +3,9 @@ import React from 'react';
 const Account = ({ loggedIn = false }) => {
 	if (loggedIn) {
 		return (
-			<div class="dropdown">
+			<div className="dropdown">
 				<a
-					class="nav-link dropdown-toggle"
+					className="nav-link dropdown-toggle"
 					href="#"
 					id="navbarDropdown"
 					role="button"
@@ -15,17 +15,17 @@ const Account = ({ loggedIn = false }) => {
 				>
 					Личный кабинет
 				</a>
-				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-					<a class="dropdown-item" href="#">
+				<div className="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a className="dropdown-item" href="#">
 						Мои заказы
 					</a>
-					<a class="dropdown-item" href="#">
+					<a className="dropdown-item" href="#">
 						Избранное
 					</a>
-					<a class="dropdown-item" href="#">
+					<a className="dropdown-item" href="#">
 						Корзина
 					</a>
-					<a class="dropdown-item" href="#">
+					<a className="dropdown-item" href="#">
 						Выход
 					</a>
 				</div>

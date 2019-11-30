@@ -1,15 +1,15 @@
 import React from 'react';
 
 const DropdownCategoryItem = () => (
-	<a class="dropdown-item" href="#">
+	<a className="dropdown-item" href="#">
 		Категория
 	</a>
 );
 
 const DropdownCategory = () => (
-	<li class="nav-item dropdown">
+	<li className="nav-item dropdown">
 		<a
-			class="nav-link dropdown-toggle"
+			className="nav-link dropdown-toggle"
 			href="#"
 			id="navbarDropdown"
 			role="button"
@@ -19,7 +19,7 @@ const DropdownCategory = () => (
 		>
 			Еще категории
 		</a>
-		<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+		<div className="dropdown-menu" aria-labelledby="navbarDropdown">
 			<DropdownCategoryItem/>
 			<DropdownCategoryItem/>
 			<DropdownCategoryItem/>
