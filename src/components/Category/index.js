@@ -1,5 +1,5 @@
 import React from 'react';
-import ProductCard from './ProductCard';
+import ProductCard from '../UI/ProductCard';
 
 class Category extends React.Component {
 	getProducts() {
@@ -15,7 +15,7 @@ class Category extends React.Component {
 	render() {
 		return (
 			<main className="container">
-				<h3>Товары в категории {this.props.match.params.id}</h3>
+				<h3>Товары в категории {this.props.id}</h3>
 				<div className="d-flex justify-content-end">
 					<span className="mx-3">Сортировка:</span>
 					<button className="mx-3">По алфавиту</button>

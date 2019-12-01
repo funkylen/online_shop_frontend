@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
-import logo from '../assets/img/logo.png';
-import Category from './Header/Category';
-import DropdownCategory from './Header/DropdownCategory';
-import Account from './Header/Account';
+import logo from '../../assets/img/logo.png';
+import Category from './Category';
+// import DropdownCategory from './DropdownCategory';
+import Account from './Account';
 
 class Header extends React.Component {
 	getCategories() {
@@ -39,10 +39,11 @@ class Header extends React.Component {
 								placeholder="Поиск по товарам"
 								aria-label="Search"
 							/>
-							<button className="btn btn-outline-success my-2 my-sm-0" type="submit">
+							<button className="btn btn-outline-danger my-2 my-sm-0" type="submit">
 								Поиск
 							</button>
 						</form>
+                        
 						<Account loggedIn={true} />
 					</div>
 				</nav>
@@ -61,10 +62,9 @@ class Header extends React.Component {
 							<span className="navbar-toggler-icon" />
 						</button>
 
-						<div className="collapse navbar-collapse" id="navbarSupportedContent">
-							<ul className="navbar-nav mr-auto">
+						<div className="collapse navbar-collapse overflow-auto" id="navbarSupportedContent">
+							<ul className="navbar-nav mx-auto">
 								{this.getCategories()}
-								<DropdownCategory />
 							</ul>
 						</div>
 					</div>

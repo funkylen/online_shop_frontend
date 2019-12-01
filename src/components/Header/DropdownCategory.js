@@ -1,6 +1,6 @@
 import React from 'react';
 
-const DropdownCategoryItem = () => (
+const Item = () => (
 	<a className="dropdown-item" href="#">
 		Категория
 	</a>
@@ -20,14 +20,11 @@ const DropdownCategory = () => (
 			Еще категории
 		</a>
 		<div className="dropdown-menu" aria-labelledby="navbarDropdown">
-			<DropdownCategoryItem/>
-			<DropdownCategoryItem/>
-			<DropdownCategoryItem/>
-			<DropdownCategoryItem/>
-			<DropdownCategoryItem/>
-			<DropdownCategoryItem/>
-			<DropdownCategoryItem/>
-			<DropdownCategoryItem/>
+			<Item/>
+			<Item/>
+			<Item/>
+			<Item/>
+			<Item/>
 		</div>
 	</li>
 );

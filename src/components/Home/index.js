@@ -1,7 +1,7 @@
 import React from 'react';
-import ProductCard from './ProductCard';
+import ProductCard from '../UI/ProductCard';
 
-class Index extends React.Component {
+class Home extends React.Component {
 	getProducts() {
 		let products = [];
 
@@ -27,4 +27,4 @@ class Index extends React.Component {
 	}
 }
 
-export default Index;
+export default Home;

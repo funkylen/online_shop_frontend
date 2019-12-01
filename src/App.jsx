@@ -1,22 +1,21 @@
-import React, { Fragment } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import * as pages from './pages';
 
-import BoxContainer from './containers/box-container';
 import Header from './components/Header';
-import Main from './components/Main';
 import Footer from './components/Footer';
 
 class App extends React.Component {
 	render() {
 		return (
-			<Fragment>
-				<Router>
-					<Header />
-					<Main />
-					<Footer />
-					{/* <BoxContainer /> */}
-				</Router>
-			</Fragment>
+			<Router>
+				<Header />
+				<Switch>
+					<Route exact path="/" component={pages.index} />
+					<Route path="/category/:id" component={pages.category} />
+				</Switch>
+				<Footer />
+			</Router>
 		);
 	}
 }
