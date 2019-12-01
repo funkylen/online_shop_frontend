@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Header.css';
 import logo from '../assets/img/logo.png';
 import Category from './Header/Category';
@@ -10,7 +11,11 @@ class Header extends React.Component {
 		let categories = [];
 
 		for (let i = 0; i < 10; i++) {
-			categories.push(<Category key={`category_${i}`} />);
+			categories.push(
+				<Link to={`/category/${i}`}>
+					<Category key={`category_${i}`} />
+				</Link>
+			);
 		}
 
 		return categories;
@@ -21,9 +26,11 @@ class Header extends React.Component {
 			<header>
 				<nav className="navbar navbar-expand-lg navbar-light bg-light">
 					<div className="container">
-						<a className="navbar-brand" href="#">
-							<img src={logo} alt="Лого" />
-						</a>
+						<Link to="/">
+							<a className="navbar-brand">
+								<img src={logo} alt="Лого" />
+							</a>
+						</Link>
 
 						<form className="form-inline my-2 my-lg-0">
 							<input
@@ -36,7 +43,7 @@ class Header extends React.Component {
 								Поиск
 							</button>
 						</form>
-						<Account loggedIn={true}/>
+						<Account loggedIn={true} />
 					</div>
 				</nav>
 

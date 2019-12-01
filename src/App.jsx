@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import BoxContainer from './containers/box-container';
 import Header from './components/Header';
@@ -9,10 +10,12 @@ class App extends React.Component {
 	render() {
 		return (
 			<Fragment>
-				<Header />
-				<Main />
-				<Footer />
-				{/* <BoxContainer /> */}
+				<Router>
+					<Header />
+					<Main />
+					<Footer />
+					{/* <BoxContainer /> */}
+				</Router>
 			</Fragment>
 		);
 	}
