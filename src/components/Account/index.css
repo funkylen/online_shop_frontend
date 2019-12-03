@@ -1,0 +1,12 @@
+.active-item{
+  font-weight: 500;
+}
+
+.no-active-item{
+  font-weight: 400;
+  color: rgba(158, 158, 158, 0.877);
+}
+
+.no-active-item:hover {
+  color: #000;
+}
