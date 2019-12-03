@@ -10,18 +10,43 @@ class Header extends React.Component {
 	getCategories() {
 		let categories = [];
 
-		for (let i = 0; i < 10; i++) {
+		this.props.categories.forEach((element) => {
 			categories.push(
-				<Link to={`/category/${i}`}>
-					<Category key={`category_${i}`} />
+				<Link to={`/category/${element.id}`}>
+					<Category name={element.name} />
 				</Link>
 			);
-		}
+		});
 
 		return categories;
 	}
 
 	render() {
+		const categories = this.getCategories();
+
+		const categoriesNavbar =
+			categories.length === 0 ? null : (
+				<nav className="navbar navbar-expand-lg navbar-light bg-light">
+					<div className="container">
+						<button
+							className="navbar-toggler"
+							type="button"
+							data-toggle="collapse"
+							data-target="#navbarSupportedContent"
+							aria-controls="navbarSupportedContent"
+							aria-expanded="false"
+							aria-label="Toggle navigation"
+						>
+							<span className="navbar-toggler-icon" />
+						</button>
+
+						<div className="collapse navbar-collapse overflow-auto" id="navbarSupportedContent">
+							<ul className="navbar-nav mx-auto">{categories}</ul>
+						</div>
+					</div>
+				</nav>
+			);
+
 		return (
 			<header>
 				<nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -43,32 +68,11 @@ class Header extends React.Component {
 								Поиск
 							</button>
 						</form>
-                        
 						<Account loggedIn={true} />
 					</div>
 				</nav>
 
-				<nav className="navbar navbar-expand-lg navbar-light bg-light">
-					<div className="container">
-						<button
-							className="navbar-toggler"
-							type="button"
-							data-toggle="collapse"
-							data-target="#navbarSupportedContent"
-							aria-controls="navbarSupportedContent"
-							aria-expanded="false"
-							aria-label="Toggle navigation"
-						>
-							<span className="navbar-toggler-icon" />
-						</button>
-
-						<div className="collapse navbar-collapse overflow-auto" id="navbarSupportedContent">
-							<ul className="navbar-nav mx-auto">
-								{this.getCategories()}
-							</ul>
-						</div>
-					</div>
-				</nav>
+				{categoriesNavbar}
 			</header>
 		);
 	}

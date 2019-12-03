@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import * as pages from './pages';
 
-import Header from './components/Header';
+import Header from './containers/Header';
 import Footer from './components/Footer';
 
 class App extends React.Component {
