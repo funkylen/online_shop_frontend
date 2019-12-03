@@ -6,7 +6,7 @@ class addCategory extends React.Component {
     return (
       <div className="card">
         <div className="card-body">
-          <h5 class="card-title mb-4">Добавление категории</h5>
+          <h5 className="card-title mb-4">Добавление категории</h5>
 
           <div className="col-sm mb-4">
             <label>Название категории</label>
@@ -24,3 +24,4 @@ class addCategory extends React.Component {
   }
 }
 
+export default addCategory;

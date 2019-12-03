@@ -8,7 +8,7 @@ import Account from './components/Account';
 // import OrdersEmpty from './components/OrdersEmpty';
 // import Settings from './components/Settings';
 // import AddCategory from './components/AddCategory';
-
+// import AddProduct from './components/AddProduct';
 
 export const index = () => <Home />;
 
@@ -25,3 +25,5 @@ export const account = ({ match }) => <Account id={match.params.id} />;
 // export const settings = ({ match }) => <Settings id={match.params.id} />;
 
 // export const addCategory = ({ match }) => <AddCategory id={match.params.id} />;
+
+// export const addProduct = ({ match }) => <AddProduct id={match.params.id} />;
