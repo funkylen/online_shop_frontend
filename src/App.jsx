@@ -15,9 +15,10 @@ class App extends React.Component {
 					<Route path="/category/:id" component={pages.category} />
           <Route path="/product/:id" component={pages.product} />
           <Route path="/account/:id" component={pages.account} />
+          {/* <Route path="/account/orders" component={pages.orders} /> */}
 				</Switch>
 				<Footer />
-			</Router>
+			</Router> 
 		);
 	}
 }
