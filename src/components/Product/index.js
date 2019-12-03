@@ -10,26 +10,26 @@ class Product extends React.Component {
       <main className="container">
       <div className="row align-items-center justify-content-around" style={{marginBottom: "30px"}}>
 
-        <div className="col-5">
-          <div className="card" style={{height: "450px"}}>
+        <div className="col-lg-5 mb-2">
+          <div className="card" style={{minHeight: "450px"}}>
             <div className="card-body">
-              <img src={ProductImage} className="card-img-top" alt="Продукт" />
+              <img src={ProductImage} className="card-img-top" alt="Продукт"/>
             </div>
           </div> 
         </div>
 
-        <div className="col-5">
-          <div className="card"  style={{height: "450px"}}>
+        <div className="col-lg-5 mb-2">
+          <div className="card"  style={{minHeight: "450px"}}>
             <div className="card-body">
               <div className="row justify-content-around align-items-center" style={{marginBottom: "30px"}}>
                 <div>
-                  <p><strong>Детский конструктор</strong></p>
+                  <p className="pt-3"><strong>Детский конструктор</strong></p>
                 </div>
                   <div className="btn-hover">
                 </div>
               </div>
 
-              <div className="row justify-content-around align-items-center" style={{marginBottom: "30px"}}>
+              <div className="row justify-content-around align-items-center ml-2" style={{marginBottom: "30px"}}>
                 <div className="col-sm">
                   <p>Цена:</p>
                 </div>
@@ -38,7 +38,7 @@ class Product extends React.Component {
                 </div>
               </div>
 
-              <div className="row justify-content-around align-items-center" style={{marginBottom: "30px"}}>
+              <div className="row justify-content-around align-items-center ml-2" style={{marginBottom: "30px"}}>
                 <div className="col-sm">
                   <p>Количество:</p>
                 </div>
@@ -49,18 +49,18 @@ class Product extends React.Component {
                 </div>
               </div>
 
-              <div className="row justify-content-around align-items-center">
+              <div className="row justify-content-around align-items-center ml-2">
                 <div className="col-sm">
                   <p>Описание:</p>
                 </div>
               </div>
-              <div className="row justify-content-around align-items-center" style={{marginBottom: "30px"}}>
+              <div className="row justify-content-around align-items-center ml-2" style={{marginBottom: "30px"}}>
                 <div className="col-sm">
                   <p>Тут будет описание товара, тип смотрите какой классный конструктор, вау, *взрыв*, эпик и всё.</p>
                 </div>
               </div>
 
-              <div className="row justify-content-around align-items-center">
+              <div className="row justify-content-around align-items-center ml-2">
                 <div className="col-sm">
                   <button type="button" className="btn btn-danger">Добавить в корзину</button>
                 </div>
