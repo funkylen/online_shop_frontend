@@ -1,7 +1,5 @@
 import React, { Fragment } from 'react';
 
-import Home from './components/Home';
-import Category from './components/Category';
 import Product from './components/Product';
 import Account from './components/Account';
 // import Orders from './components/Account';
@@ -10,9 +8,12 @@ import Account from './components/Account';
 // import AddCategory from './components/Account';
 // import AddProduct from './components/Account';
 
-export const index = () => <Home />;
+import HomePage from './containers/HomePage';
+import CategoryPage from './containers/CategoryPage';
 
-export const category = ({ match }) => <Category id={match.params.id} />;
+export const index = () => <HomePage />;
+
+export const category = ({ match }) => <CategoryPage id={match.params.id} />;
 
 export const product = ({ match }) => <Product id={match.params.id} />;
 
