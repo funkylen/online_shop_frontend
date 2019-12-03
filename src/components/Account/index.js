@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './index.css';
 
@@ -15,21 +16,21 @@ class Account extends React.Component {
         <div className="row align-items-start justify-content-start" style={{ paddingLeft: "20px" }}>
           <div className="col-3">
             <div className="row mb-3">
-              <a className="active-item" href="#myorders">Мои заказы</a>
+              <Link to="/account/orders" className="active-item">Мои заказы</Link> 
             </div>
             <div className="row mb-3">
-              <a className="no-active-item" href="#settings">Настройки</a>
+              <Link to="/account/settigs" className="no-active-item">Настройки</Link>
             </div>
             <div className="row mb-3">
-              <a className="no-active-item" href="#addcategory">Добавить категорию</a>
+              <Link to="/account/addCategory" className="no-active-item">Добавить категорию</Link>
             </div>
             <div className="row">
-              <a className="no-active-item" href="#addproduct">Добавить продукт</a>
+              <Link to="/account/addProduct" className="no-active-item">Добавить товар</Link>
             </div>
           </div>
 
           <div className="col-7 mb-4">
-            <p>тут какой-то блок</p>
+            
           </div>
         </div>
       </div>

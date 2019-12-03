@@ -4,11 +4,11 @@ import Home from './components/Home';
 import Category from './components/Category';
 import Product from './components/Product';
 import Account from './components/Account';
-// import Orders from './components/Orders';
-// import OrdersEmpty from './components/OrdersEmpty';
-// import Settings from './components/Settings';
-// import AddCategory from './components/AddCategory';
-// import AddProduct from './components/AddProduct';
+// import Orders from './components/Account';
+// import OrdersEmpty from './components/Account';
+// import Settings from './components/Account';
+// import AddCategory from './components/Account';
+// import AddProduct from './components/Account';
 
 export const index = () => <Home />;
 
