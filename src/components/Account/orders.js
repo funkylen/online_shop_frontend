@@ -6,7 +6,7 @@ class Orders extends React.Component {
   render() {
     return (
       <div className="container">
-        <div className="card mb-4" style={{ width: "800px" }}>
+        <div className="card mb-4">
 
           <h5 className="card-header">ID заказа 123456</h5>
           <div className="card-body">
@@ -41,7 +41,7 @@ class Orders extends React.Component {
           </div>
         </div>
 
-        <div className="card" style={{ width: "800px" }}>
+        <div className="card">
           <select className="card-header form-control" style={{ height: "50px" }}>
             <option>1 товар</option>
             <option>2 товар</option>
@@ -52,11 +52,11 @@ class Orders extends React.Component {
           <div className="card-body container">
             <div className="row">
 
-              <div className="col-2">
-                <img src={ProductImage} className="card-img-left" style={{ width: "100px" }} />
+              <div className="col-sm-3 pt-3">
+                <img src={ProductImage} className="card-img" style={{ width: "100px" }} />
               </div>
 
-              <div className="col-10">
+              <div className="col-sm-9">
 
                 <div className="row justify-content-around align-items-center">
                   <div className="col-sm">
