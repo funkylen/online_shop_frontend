@@ -4,7 +4,8 @@ import Home from './components/Home';
 import Category from './components/Category';
 import Product from './components/Product';
 import Account from './components/Account';
-// import Orders from './components/Account';
+// import Orders from './components/Orders';
+// import OrdersEmpty from './components/OrdersEmpty';
 
 export const index = () => <Home />;
 
@@ -15,3 +16,5 @@ export const product = ({ match }) => <Product id={match.params.id} />;
 export const account = ({ match }) => <Account id={match.params.id} />;
 
 // export const orders = ({ match }) => <Orders id={match.params.id} />;
+
+// export const ordersEmpty = ({ match }) => <OrdersEmpty id={match.params.id} />;

@@ -27,11 +27,11 @@ class Account extends React.Component {
               <a class="no-active-item" href="#addproduct">Добавить продукт</a>
             </div>
           </div>
+
           <div className="col-7 mb-4">
-            <p>сюда вставляем блоки рутером</p>
+            <p>тут будут блоки</p>
           </div>
         </div>
-
       </div>
     );
   }
