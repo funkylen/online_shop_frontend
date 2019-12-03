@@ -1,8 +1,10 @@
 import React, { Fragment } from 'react';
 
-import Home from './components/Home';
-import Category from './components/Category';
+import HomePage from './containers/HomePage';
+import CategoryPage from './containers/CategoryPage';
 
-export const index = () => <Home />;
+export const index = () => <HomePage />;
 
-export const category = ({ match }) => <Category id={match.params.id} />;
+export const category = ({ match }) => {
+	return <CategoryPage id={match.params.id} />;
+};
