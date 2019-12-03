@@ -5,7 +5,7 @@ import ProductImage from '../../assets/img/product/product1.jpg';
 class Orders extends React.Component {
   render() {
     return (
-      <div class="container">
+      <div className="container">
         <div className="card mb-4" style={{ width: "800px" }}>
 
           <h5 className="card-header">ID заказа 123456</h5>
@@ -42,7 +42,7 @@ class Orders extends React.Component {
         </div>
 
         <div className="card" style={{ width: "800px" }}>
-          <select class="card-header form-control" style={{ height: "50px" }}>
+          <select className="card-header form-control" style={{ height: "50px" }}>
             <option>1 товар</option>
             <option>2 товар</option>
             <option>3 товар</option>
@@ -50,10 +50,10 @@ class Orders extends React.Component {
             <option>5 товар</option>
           </select>
           <div className="card-body container">
-            <div class="row">
+            <div className="row">
 
               <div className="col-2">
-                <img src={ProductImage} class="card-img-left" style={{ width: "100px" }} />
+                <img src={ProductImage} className="card-img-left" style={{ width: "100px" }} />
               </div>
 
               <div className="col-10">
