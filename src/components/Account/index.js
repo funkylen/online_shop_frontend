@@ -31,7 +31,7 @@ class Account extends React.Component {
           </div>
 
           <div className="col-7 mb-4">
-          
+    
           </div>
         </div>
       </div>

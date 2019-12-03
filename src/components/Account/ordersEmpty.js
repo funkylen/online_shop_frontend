@@ -4,7 +4,7 @@ class OrdersEmpty extends React.Component {
   render() {
     return (
       <div className="container">
-        <div className="col">
+        <div className="col-sm">
 
           <div className="row justify-content-center mb-4 mt-2">
             <strong><p className="h1 text-muted">Здесь пусто :(</p></strong>
