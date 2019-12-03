@@ -29,7 +29,7 @@ class Account extends React.Component {
           </div>
 
           <div className="col-7 mb-4">
-            <p>тут будут блоки</p>
+            <p>тут какой-то блок</p>
           </div>
         </div>
       </div>

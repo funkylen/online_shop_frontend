@@ -17,6 +17,7 @@ class App extends React.Component {
           <Route path="/account/:id" component={pages.account} />
           {/* <Route path="/account/orders" component={pages.orders} /> */}
           {/* <Route path="/account/ordersEmpty" component={pages.ordersEmpty} /> */}
+          {/* <Route path="/account/settings" component={pages.settings} /> */}
 				</Switch>
 				<Footer />
 			</Router> 
