@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ProductImage from '../../assets/img/product/product1.jpg';
 
 import './index.css';
 
 class Account extends React.Component {
   render() {
     return (
-      <div className="container">
+      <div className="container mt-1">
 
         <div className="row align-items-center justify-content-start">
           <h4 style={{ paddingLeft: "15px" }}>Имя пользователя</h4>
