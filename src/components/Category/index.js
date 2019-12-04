@@ -21,13 +21,13 @@ class Category extends React.Component {
 	}
 
 	getPageNumberButtons() {
-		let pages = [];
+		if (this.props.products.data.length === 0) return null;
 
-		console.log(this.props.products.last_page);
+		let pages = [];
 
 		for (let i = 1; i < this.props.products.last_page + 1; i++) {
 			pages.push(
-				<button type="button" className="btn btn-danger mx-2">
+				<button key={`page_button_${i}`} type="button" className="btn btn-danger mx-2">
 					{i}
 				</button>
 			);

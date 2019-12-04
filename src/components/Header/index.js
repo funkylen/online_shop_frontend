@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './index.css';
 import logo from '../../assets/img/logo.png';
 import Category from './Category';
@@ -12,9 +12,9 @@ class Header extends React.Component {
 
 		this.props.categories.forEach((element) => {
 			categories.push(
-				<Link to={`/category/${element.id}`}>
+				<NavLink to={`/category/${element.id}`} activeClassName="active">
 					<Category name={element.name} />
-				</Link>
+				</NavLink>
 			);
 		});
 
