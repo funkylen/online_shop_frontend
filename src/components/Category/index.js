@@ -9,15 +9,31 @@ class Category extends React.Component {
 			products.push(
 				<ProductCard
 					key={`product_card_${element.id}`}
-					name = {element.name}
-					description = {element.description}
-					price = {element.price}
-					fav = {false}
+					name={element.name}
+					description={element.description}
+					price={element.price}
+					fav={false}
 				/>
 			);
 		});
 
 		return products;
+	}
+
+	getPageNumberButtons() {
+		let pages = [];
+
+		console.log(this.props.products.last_page);
+
+		for (let i = 1; i < this.props.products.last_page + 1; i++) {
+			pages.push(
+				<button type="button" className="btn btn-danger mx-2">
+					{i}
+				</button>
+			);
+		}
+
+		return pages;
 	}
 
 	render() {
@@ -30,17 +46,7 @@ class Category extends React.Component {
 					<button className="mx-3">По цене</button>
 				</div>
 				<div className="row mt-3">{this.getProducts()}</div>
-				<div className="d-flex justify-content-end my-5">
-					<button type="button" className="btn btn-danger mx-2">
-						1
-					</button>
-					<button type="button" className="btn btn-outline-danger mx-2">
-						2
-					</button>
-					<button type="button" className="btn btn-outline-danger mx-2">
-						3
-					</button>
-				</div>
+				<div className="d-flex justify-content-end my-5">{this.getPageNumberButtons()}</div>
 			</main>
 		);
 	}

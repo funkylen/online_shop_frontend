@@ -13,16 +13,14 @@ class App extends React.Component {
 				<Switch>
 					<Route exact path="/" component={pages.index} />
 					<Route path="/category/:id" component={pages.category} />
-          <Route path="/product/:id" component={pages.product} />
-          <Route path="/account/:id" component={pages.account} />
-          {/* <Route path="/account/orders" component={pages.orders} /> */}
-          {/* <Route path="/account/ordersEmpty" component={pages.ordersEmpty} /> */}
-          {/* <Route path="/account/settings" component={pages.settings} /> */}
-          {/* <Route path="/account/addCategory" component={pages.addCategory} /> */}
-          {/* <Route path="/account/addProduct" component={pages.addProduct} /> */}
+					<Route path="/product/:id" component={pages.product} />
+					<Route path="/account/orders" component={pages.orders} />
+					<Route path="/account/settings" component={pages.settings} />
+					<Route path="/account/add-product" component={pages.addProduct} />
+					<Route path="/account/add-category" component={pages.addCategory} />
 				</Switch>
 				<Footer />
-			</Router> 
+			</Router>
 		);
 	}
 }

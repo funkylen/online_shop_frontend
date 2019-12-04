@@ -27,7 +27,10 @@ class CategoryPage extends React.Component {
 		return this.state.category === null ? (
 			<Loading />
 		) : (
-			<Category name={this.state.category.name} products={this.state.category.products} />
+			<Category
+				name={this.state.category.name}
+				products={this.state.category.products}
+			/>
 		);
 	}
 }
