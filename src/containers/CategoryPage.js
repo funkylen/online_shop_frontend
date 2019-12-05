@@ -11,7 +11,7 @@ class CategoryPage extends React.Component {
 	getCategory(id) {
 		api
 			.getCategory(id)
-			.then((response) => this.setState({ category: response.data.data }))
+			.then((response) => this.setState({ category: response.data }))
 			.catch((err) => this.setState({ category: null }));
 	}
 
