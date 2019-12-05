@@ -9,12 +9,14 @@ import AddProduct from './components/Account/AddProduct';
 
 import HomePage from './containers/HomePage';
 import CategoryPage from './containers/CategoryPage';
+import ProductPage from './containers/ProductPage';
+
 
 export const index = () => <HomePage />;
 
 export const category = ({ match }) => <CategoryPage id={match.params.id} />;
 
-export const product = ({ match }) => <Product id={match.params.id} />;
+export const product = ({ match }) => <ProductPage id={match.params.id} />;
 
 export const orders = ({ match }) => (
 	<Account match={match}>

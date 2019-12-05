@@ -10,9 +10,6 @@ export const deleteCategory = (id) => axios.delete(`/category/${id}`);
 
 export const getProducts = () => axios.get('/product');
 export const getProduct = (id) => ({
-	current_page: 1,
-	data: [
-		{
 			id: 1,
 			category_id: 1,
 			name: 'Товар',
@@ -21,16 +18,4 @@ export const getProduct = (id) => ({
 			image: null,
 			created_at: '2019-12-05 18:26:34',
 			updated_at: '2019-12-05 18:26:34'
-		}
-	],
-	first_page_url: 'http://youngview.herokuapp.com/api/product?page=1',
-	from: 1,
-	last_page: 1,
-	last_page_url: 'http://youngview.herokuapp.com/api/product?page=1',
-	next_page_url: null,
-	path: 'http://youngview.herokuapp.com/api/product',
-	per_page: 8,
-	prev_page_url: null,
-	to: 1,
-	total: 1
 });
