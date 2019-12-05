@@ -3,7 +3,7 @@ import React from 'react';
 class AddProduct extends React.Component {
   render() {
     return (
-      <div className="card mt-1">
+      <div className="card mt-1 " style={{minWidth:"200px"}}>
         <div className="card-body">
           <h5 className="card-title mb-1">Добавление товара</h5>
         </div>

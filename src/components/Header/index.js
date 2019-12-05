@@ -10,13 +10,13 @@ class Header extends React.Component {
 	getCategories() {
 		let categories = [];
 
-		this.props.categories.forEach((element) => {
-			categories.push(
-				<NavLink to={`/category/${element.id}`} activeClassName="active">
-					<Category name={element.name} />
+    for (let i = 0; i < 5; i++) {
+      categories.push(
+				<NavLink to={`${[i]}`} activeClassName="active">
+					<Category name={"Категория"} />
 				</NavLink>
-			);
-		});
+      );
+    }
 
 		return categories;
 	}
@@ -29,7 +29,7 @@ class Header extends React.Component {
 				<nav className="navbar navbar-expand-lg navbar-light bg-light">
 					<div className="container">
 						<button
-							className="navbar-toggler"
+							className="navbar-toggler col-12"
 							type="button"
 							data-toggle="collapse"
 							data-target="#navbarSupportedContent"
@@ -40,7 +40,7 @@ class Header extends React.Component {
 							<span className="navbar-toggler-icon" />
 						</button>
 
-						<div className="collapse navbar-collapse overflow-auto" id="navbarSupportedContent">
+						<div className="collapse navbar-collapse overflow-auto" id="navbarSupportedContent" style={{textAlign:"center"}}>
 							<ul className="navbar-nav mx-auto">{categories}</ul>
 						</div>
 					</div>
@@ -50,7 +50,7 @@ class Header extends React.Component {
 		return (
 			<header>
 				<nav className="navbar navbar-expand-lg navbar-light bg-light">
-					<div className="container" style={{margin:"0px 75px"}}>
+					<div className="container">
               <Link to="/">
                 <a className="navbar-brand">
                   <img src={logo} alt="Лого" />

@@ -6,7 +6,7 @@ import './index.css';
 class Account extends React.Component {
 	render() {
 		return (
-			<div className="container mt-1" style={{margin: "0px 75px"}}>
+			<div className="container mt-1">
 				<div className="row align-items-center justify-content-start">
 					<h4 style={{ paddingLeft: '15px' }}>Имя пользователя</h4>
 				</div>
