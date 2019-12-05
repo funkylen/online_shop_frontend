@@ -1,8 +1,6 @@
 import React from 'react';
 import ProductImage from '../../assets/img/product/product1.jpg';
-import LikeImage from '../../assets/img/like.svg';
 
-import './index.css';
 
 class Product extends React.Component {
   render() {
@@ -23,9 +21,7 @@ class Product extends React.Component {
             <div className="card-body">
               <div className="row justify-content-around align-items-center" style={{marginBottom: "30px"}}>
                 <div>
-                  <p className="pt-3"><strong>Детский конструктор</strong></p>
-                </div>
-                  <div className="btn-hover">
+                  <p><strong>Детский конструктор</strong></p>
                 </div>
               </div>
 

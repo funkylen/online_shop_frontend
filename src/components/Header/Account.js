@@ -19,7 +19,6 @@ const Account = ({ loggedIn = false }) => {
 				<div className="dropdown-menu" aria-labelledby="navbarDropdown">
 					<Link to='/account/basket' className="dropdown-item">Корзина</Link>
 					<Link to='/account/orders' className="dropdown-item">Мои заказы</Link>
-					<Link to='/account/favourites' className="dropdown-item">Избранное</Link>
 					<Link to='/account/settings' className="dropdown-item">Настройки</Link>
 					<Link to='/logout' className="dropdown-item">Выход</Link>
 				</div>
