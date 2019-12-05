@@ -5,7 +5,7 @@ import ProductImage from '../../assets/img/product/product1.jpg';
 class Orders extends React.Component {
   render() {
     return (
-      <div className="container">
+      <div className="container mt-1" style={{padding:"0px 0px"}}>
         <div className="card mb-4">
 
           <h5 className="card-header">ID заказа 123456</h5>
