@@ -8,7 +8,8 @@ export const createCategory = () => axios.post('/category');
 export const editCategory = (id) => axios.put(`/category/${id}`);
 export const deleteCategory = (id) => axios.delete(`/category/${id}`);
 
-export const getProducts = () => ({
+export const getProducts = () => axios.get('/product');
+export const getProduct = (id) => ({
 	current_page: 1,
 	data: [
 		{
