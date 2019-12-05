@@ -51,23 +51,29 @@ class Header extends React.Component {
 			<header>
 				<nav className="navbar navbar-expand-lg navbar-light bg-light">
 					<div className="container" style={{margin:"0px 75px"}}>
-						<Link to="/">
-							<a className="navbar-brand">
-								<img src={logo} alt="Лого" />
-							</a>
-						</Link>
+              <Link to="/">
+                <a className="navbar-brand">
+                  <img src={logo} alt="Лого" />
+                </a>
+              </Link>
+            <div className="row">
 
-						<form className="form-inline my-2 my-lg-0">
+						<form className="form-inline">
+              <div className="col-8">
 							<input
-								className="form-control mr-sm-2"
+								className="form-control"
 								type="search"
 								placeholder="Поиск по товарам"
-								aria-label="Search"
+                aria-label="Search"
 							/>
+              </div>
+              <div className="col-4">
 							<button className="btn btn-outline-danger my-2 my-sm-0" type="submit">
 								Поиск
 							</button>
+              </div>
 						</form>
+            </div>
 						<Account loggedIn={true} />
 					</div>
 				</nav>
