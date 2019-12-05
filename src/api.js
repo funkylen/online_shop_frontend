@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-axios.defaults.baseURL = 'http://localhost:8080/api';
+axios.defaults.baseURL = 'http://youngview.herokuapp.com/api';
 
 export const getCategories = () => axios.get('/category');
 export const getCategory = (id) => axios.get(`/category/${id}`);
