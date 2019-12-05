@@ -7,7 +7,7 @@ class AddProduct extends React.Component {
 				<div className="card-body">
 					<h5 className="card-title mb-1">Добавление товара</h5>
 				</div>
-
+      <form>
 				<div className="row pl-3 pr-3 mb-3">
 					<div className="col-sm">
 						<label>Название товара</label>
@@ -33,6 +33,8 @@ class AddProduct extends React.Component {
 						Добавить
 					</button>
 				</div>
+
+      </form>
 			</div>
 		);
 	}
