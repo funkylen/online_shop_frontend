@@ -19,7 +19,7 @@ class AddCategory extends React.Component {
 
             <div className="col-sm">
               <button type="button" className="btn btn-danger">
-                Добавить
+                Добавить категорию
 						</button>
             </div>
           </form>

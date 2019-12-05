@@ -22,14 +22,17 @@ class AddProduct extends React.Component {
             </div>
           </div>
 
-          <div className="col-sm mb-3 mt-4 ml-3" style={{width: "400px"}}>
+          <div className="col-sm">
+              <p className="mb-1">Выберите изображение для товара:</p>
+            </div>
+          <div className="col-sm mb-3 ml-3" style={{width: "75px"}}>
             <input type="file" class="custom-file-input" />
-            <label class="custom-file-label">Выберите изображение для товара</label>
+            <label class="custom-file-label"></label>
           </div>
 
           <div className="col-sm mb-3">
             <button type="button" className="btn btn-danger">
-              Добавить
+              Добавить товар
 					</button>
           </div>
 

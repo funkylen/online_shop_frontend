@@ -5,12 +5,8 @@ class Settings extends React.Component {
     return (
       <div className="card mt-1">
         <div className="card-body">
+          <h5 className="card-title">Мои данные</h5>
 
-          <div className="col-12">
-            <div>
-              <p><strong>Мои данные</strong></p>
-            </div>
-          </div>
           <form>
             <div className="row justify-content-start align-items-center pl-3 pr-3 mb-4">
               <div className="row">
