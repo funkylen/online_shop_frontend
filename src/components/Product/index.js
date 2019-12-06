@@ -9,7 +9,7 @@ class Product extends React.Component {
       <div className="row align-items-center justify-content-around" style={{marginBottom: "30px"}}>
 
         <div className="col-lg-5 mb-2">
-          <div className="card" style={{minHeight: "450px"}}>
+          <div className="card" style={{minHeight: "430px"}}>
             <div className="card-body">
               <img src={this.props.image} className="card-img-top" alt="Продукт"/>
             </div>
@@ -17,7 +17,7 @@ class Product extends React.Component {
         </div>
 
         <div className="col-lg-5 mb-2">
-          <div className="card"  style={{minHeight: "450px"}}>
+          <div className="card"  style={{minHeight: "430px"}}>
             <div className="card-body">
               <div className="row justify-content-around align-items-center" style={{marginBottom: "30px"}}>
                 <div>
@@ -57,12 +57,7 @@ class Product extends React.Component {
               </div>
 
               <div className="row justify-content-around align-items-center ml-2">
-                <div className="col-sm">
-                  <button type="button" className="btn btn-danger">Добавить в корзину</button>
-                </div>
-                <div className="col-sm">
-                <a className="btn btn-light" href="#" role="button">Купить в 1 клик</a>
-                </div>
+                <button type="button" className="btn btn-danger">Добавить в корзину</button>
               </div>
 
             </div>
