@@ -10,7 +10,7 @@ class Header extends React.Component {
 	getCategories() {
 		let categories = [];
 
-		this.props.categories.forEach(element => {
+		this.props.categories.forEach((element) => {
 			categories.push(
 				<NavLink to={`/category/${element.id}`} activeClassName="active">
 					<Category name={element.name} />
@@ -60,23 +60,14 @@ class Header extends React.Component {
 								<img src={logo} alt="Лого" />
 							</a>
 						</Link>
-						<div className="row">
-							<form className="form-inline">
-								<div className="col-8">
-									<input
-										className="form-control"
-										type="search"
-										placeholder="Поиск по товарам"
-										aria-label="Search"
-									/>
-								</div>
-								<div className="col-4">
-									<button className="btn btn-outline-danger my-2 my-sm-0" type="submit">
-										Поиск
-									</button>
-								</div>
-							</form>
-						</div>
+						<form className="form-inline">
+							<input
+								className="form-control"
+								type="search"
+								placeholder="Поиск по товарам"
+								aria-label="Search"
+							/>
+						</form>
 						<Account loggedIn={true} />
 					</div>
 				</nav>
