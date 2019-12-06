@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
 
-import Product from './components/Product';
 import Account from './components/Account';
 import Orders from './components/Account/Orders';
 import Settings from './components/Account/Settings';
@@ -10,6 +9,8 @@ import AddProduct from './components/Account/AddProduct';
 import HomePage from './containers/HomePage';
 import CategoryPage from './containers/CategoryPage';
 import ProductPage from './containers/ProductPage';
+import LoginPage from './containers/LoginPage';
+import RegisterPage from './containers/RegisterPage';
 
 
 export const index = () => <HomePage />;
@@ -41,3 +42,7 @@ export const addProduct = ({ match }) => (
 		<AddProduct />
 	</Account>
 );
+
+export const login = () => <LoginPage />
+
+export const register = () => <RegisterPage />

@@ -18,6 +18,8 @@ class App extends React.Component {
 					<Route path="/account/settings" component={pages.settings} />
 					<Route path="/account/add-product" component={pages.addProduct} />
 					<Route path="/account/add-category" component={pages.addCategory} />
+					<Route path="/login" component={pages.login} />
+					<Route path="/register" component={pages.register} />
 				</Switch>
 				<Footer />
 			</Router>

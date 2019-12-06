@@ -12,7 +12,7 @@ class Header extends React.Component {
 	}
 
 	render() {
-		return <HeaderComponent categories={this.state.categories} />;
+		return <HeaderComponent categories={this.state.categories} loggedIn={localStorage.getItem('token') !== null} />;
 	}
 }
 

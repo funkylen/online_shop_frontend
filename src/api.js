@@ -1,9 +1,28 @@
 import axios from 'axios';
 
-axios.defaults.baseURL = 'https://youngview.herokuapp.com/api';
-// axios.defaults.baseURL = 'http://localhost:8080/api';
+// axios.defaults.baseURL = 'https://youngview.herokuapp.com/api';
+axios.defaults.baseURL = 'http://localhost:8080/api';
 
-axios.defaults.headers.common = {'Accept': 'application/json, */*'}
+axios.defaults.headers.common = {
+	'Accept': 'application/json, */*',
+	'Content-Type': 'application/json'
+};
+
+export const login = (email, password) =>
+	axios.post('/login', {
+		email: email,
+		password: password
+	});
+export const register = (email, password, surname, name, patronymic, phone) =>
+	axios.post('/register', {
+		email: email,
+		password: password,
+		password_confirmed: password,
+		surname: surname,
+		name: name,
+		patronymic: patronymic,
+		phone: phone
+	});
 
 export const getCategories = () => axios.get('/category');
 export const getCategory = (id) => axios.get(`/category/${id}`);
