@@ -1,8 +1,6 @@
 import React from 'react';
 import ProductImage from '../../assets/img/product/product1.jpg';
-import LikeImage from '../../assets/img/like.svg';
 
-import './index.css';
 
 class Product extends React.Component {
   render() {
@@ -13,7 +11,7 @@ class Product extends React.Component {
         <div className="col-lg-5 mb-2">
           <div className="card" style={{minHeight: "450px"}}>
             <div className="card-body">
-              <img src={ProductImage} className="card-img-top" alt="Продукт"/>
+              <img src={this.props.image} className="card-img-top" alt="Продукт"/>
             </div>
           </div> 
         </div>
@@ -23,9 +21,7 @@ class Product extends React.Component {
             <div className="card-body">
               <div className="row justify-content-around align-items-center" style={{marginBottom: "30px"}}>
                 <div>
-                  <p className="pt-3"><strong>Детский конструктор</strong></p>
-                </div>
-                  <div className="btn-hover">
+                  <p><strong>{this.props.name}</strong></p>
                 </div>
               </div>
 
@@ -34,7 +30,7 @@ class Product extends React.Component {
                   <p>Цена:</p>
                 </div>
                 <div className="col-sm">
-                  <p><strong>317 P</strong></p>
+                  <p><strong>{this.props.price}Р</strong></p>
                 </div>
               </div>
 
@@ -56,7 +52,7 @@ class Product extends React.Component {
               </div>
               <div className="row justify-content-around align-items-center ml-2" style={{marginBottom: "30px"}}>
                 <div className="col-sm">
-                  <p>Тут будет описание товара, тип смотрите какой классный конструктор, вау, *взрыв*, эпик и всё.</p>
+                  <p>{this.props.description}</p>
                 </div>
               </div>
 
