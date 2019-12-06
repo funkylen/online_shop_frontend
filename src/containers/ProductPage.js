@@ -9,7 +9,10 @@ class ProductPage extends React.Component {
 	};
 
 	getProduct(id) {
-		this.setState({product:api.getProduct(id)})
+		api
+			.getProduct(id)
+			.then((response) => this.setState({ product: response.data }))
+			.catch((err) => this.setState({ product: null }));
 	}
 
 	componentDidMount() {
@@ -17,17 +20,16 @@ class ProductPage extends React.Component {
 	}
 
 	render() {
-    console.log(this.state);
-    return this.state.product === null ? (
+		return this.state.product === null ? (
 			<Loading />
 		) : (
-    <Product 
-      name = {this.state.product.name}
-      price = {this.state.product.price}
-      description = {this.state.product.description}
-      image = {this.state.product.image}
-    /> 
-    );
+			<Product
+				name={this.state.product.name}
+				price={this.state.product.price}
+				description={this.state.product.description}
+				image={this.state.product.image}
+			/>
+		);
 	}
 }
 

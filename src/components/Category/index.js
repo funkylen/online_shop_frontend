@@ -9,10 +9,10 @@ class Category extends React.Component {
 			products.push(
 				<ProductCard
 					key={`product_card_${element.id}`}
+					id={element.id}
 					name={element.name}
 					description={element.description}
 					price={element.price}
-					fav={false}
 				/>
 			);
 		});

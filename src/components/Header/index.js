@@ -10,13 +10,13 @@ class Header extends React.Component {
 	getCategories() {
 		let categories = [];
 
-    for (let i = 0; i < 5; i++) {
-      categories.push(
-				<NavLink to={`${[i]}`} activeClassName="active">
-					<Category name={"Категория"} />
+		this.props.categories.forEach((element) => {
+			categories.push(
+				<NavLink to={`/category/${element.id}`} activeClassName="active">
+					<Category name={element.name} />
 				</NavLink>
-      );
-    }
+			);
+		});
 
 		return categories;
 	}
@@ -40,7 +40,11 @@ class Header extends React.Component {
 							<span className="navbar-toggler-icon" />
 						</button>
 
-						<div className="collapse navbar-collapse overflow-auto" id="navbarSupportedContent" style={{textAlign:"center"}}>
+						<div
+							className="collapse navbar-collapse overflow-auto"
+							id="navbarSupportedContent"
+							style={{ textAlign: 'center' }}
+						>
 							<ul className="navbar-nav mx-auto">{categories}</ul>
 						</div>
 					</div>
@@ -51,30 +55,20 @@ class Header extends React.Component {
 			<header>
 				<nav className="navbar navbar-expand-lg navbar-light bg-light">
 					<div className="container">
-              <Link to="/">
-                <a className="navbar-brand">
-                  <img src={logo} alt="Лого" />
-                </a>
-              </Link>
-            <div className="row">
-
+						<Link to="/">
+							<a className="navbar-brand">
+								<img src={logo} alt="Лого" />
+							</a>
+						</Link>
 						<form className="form-inline">
-              <div className="col-8">
 							<input
 								className="form-control"
 								type="search"
 								placeholder="Поиск по товарам"
-                aria-label="Search"
+								aria-label="Search"
 							/>
-              </div>
-              <div className="col-4">
-							<button className="btn btn-outline-danger my-2 my-sm-0" type="submit">
-								Поиск
-							</button>
-              </div>
 						</form>
-            </div>
-						<Account loggedIn={true} />
+						<Account loggedIn={this.props.loggedIn} />
 					</div>
 				</nav>
 
