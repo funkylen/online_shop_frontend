@@ -40,8 +40,8 @@ class RegisterPage extends React.Component {
             <div className="form-group col-auto">
               <label htmlFor="surname">Почта*</label>
               <input required
-                type="text"
-                name="surname"
+                type="email"
+                name="email"
                 className="form-control"
                 style={{ minWidth: "200px" }}
               />
@@ -49,8 +49,8 @@ class RegisterPage extends React.Component {
             <div className="form-group col-auto">
               <label htmlFor="name">Пароль*</label>
               <input required
-                type="text"
-                name="name"
+                type="password"
+                name="password"
                 className="form-control"
                 style={{ minWidth: "200px" }}
               />
