@@ -11,7 +11,7 @@ class HomePage extends React.Component {
 	getProducts() {
 		api
 			.getProducts()
-			.then((response) => this.setState({ products: response.data.data }))
+			.then((response) => this.setState({ products: response.data }))
 			.catch((err) => this.setState({ products: null }));
 	}
 
