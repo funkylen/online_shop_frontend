@@ -68,7 +68,7 @@ class Header extends React.Component {
 								aria-label="Search"
 							/>
 						</form>
-						<Account loggedIn={true} />
+						<Account loggedIn={this.props.loggedIn} />
 					</div>
 				</nav>
 
