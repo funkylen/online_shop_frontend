@@ -33,35 +33,35 @@ class LoginPage extends React.Component {
 	render() {
 		const { email, password, error } = this.state;
 		return (
+      <div className="container">
 			<div className="col-md-6 col-md-offset-3">
-				<h2>Login</h2>
+				<h2 className="mb-4">Вход</h2>
 				<form name="form" onSubmit={this.handleSubmit}>
 					<div className="form-group">
-						<label htmlFor="email">Email</label>
-						<input
-							type="text"
+						<label htmlFor="email">Электронная почта</label>
+						<input required
+							type="email"
 							className="form-control"
-							name="email"
-							value={email}
-							onChange={this.handleChange}
+              name="email"
+              style={{maxWidth: "220px"}}
 						/>
 					</div>
 					<div className="form-group">
-						<label htmlFor="password">Password</label>
-						<input
+						<label htmlFor="password">Пароль</label>
+						<input required
 							type="password"
 							className="form-control"
-							name="password"
-							value={password}
-							onChange={this.handleChange}
+              name="password"
+              style={{maxWidth: "220px"}}
 						/>
 					</div>
 					<div className="form-group">
-						<button className="btn btn-primary">Login</button>
+						<button className="btn btn-primary">Войти</button>
 					</div>
 					{error && <div className={'alert alert-danger'}>{error}</div>}
 				</form>
 			</div>
+      </div>
 		);
 	}
 }
