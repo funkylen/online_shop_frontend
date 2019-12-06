@@ -6,12 +6,12 @@ import productImage from '../../../assets/img/product/product1.jpg';
 const ProductCard = ({ id, name, description, price }) => (
 	<div className="my-3 mx-auto product-card">
 		<Link to={`/product/${id}`}>
-			<div className="card" style={{ width: '250px' }}>
+			<div className="card p-2" style={{ width: '250px', height: '500px' }}>
 				<img src={productImage} className="card-img-top" alt="Изображение товара" />
 				<div className="card-body">
 					<h5 className="card-title">{name}</h5>
-					<p className="card-text">{description}</p>
-					<p className="d-flex justify-content-between">
+					<p className="card-text description">{description}</p>
+					<p className="d-flex price">
 						<b>{price} Р</b>
 					</p>
 				</div>
