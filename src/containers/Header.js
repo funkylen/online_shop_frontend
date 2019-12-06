@@ -8,7 +8,7 @@ class Header extends React.Component {
 	};
 
 	componentDidMount() {
-		api.getCategories().then((response) => this.setState({ categories: response.data.data }));
+		api.getCategories().then((response) => this.setState({ categories: response.data }));
 	}
 
 	render() {
