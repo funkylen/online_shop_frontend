@@ -8,7 +8,7 @@ axios.defaults.headers.common = auth.loggedIn()
 	? {
 			Accept: 'application/json, */*',
 			Authorization: `Bearer ${auth.getToken()}`,
-			'Content-Type': 'application/json',
+			'Content-Type': 'application/json'
 		}
 	: {
 			Accept: 'application/json, */*',
@@ -20,17 +20,21 @@ export const login = (email, password) =>
 		email: email,
 		password: password
 	});
-	
-export const register = (email, password, surname, name, patronymic, phone) =>
-	axios.post('/register', {
+
+export const register = (email, password, surname, name, patronymic, phone) => {
+	const data = {
 		email: email,
 		password: password,
-		password_confirmed: password,
+		password_confirmation: password,
 		surname: surname,
-		name: name,
-		patronymic: patronymic,
-		phone: phone
-	});
+		name: name
+	};
+
+	if (patronymic) data.patronymic = patronymic;
+	if (phone) data.phone = phone;
+
+	return axios.post('/register', data);
+};
 
 export const init = () => axios.get('/init');
 
