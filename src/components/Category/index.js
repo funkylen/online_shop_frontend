@@ -25,11 +25,6 @@ class Category extends React.Component {
 		return (
 			<main className="container">
 				<h3>{this.props.name}</h3>
-				<div className="d-flex justify-content-end">
-					<span className="mx-3">Сортировка:</span>
-					<button className="mx-3">По алфавиту</button>
-					<button className="mx-3">По цене</button>
-				</div>
 				<div className="row mt-3">{this.getProducts()}</div>
 				<div className="d-flex justify-content-around my-5">
 					<button

@@ -13,7 +13,7 @@ const User = ({logout}) => (
 	<div className="dropdown">
 		<a
 			className="nav-link dropdown-toggle"
-			href=""
+			href="/#"
 			id="navbarDropdown"
 			role="button"
 			data-toggle="dropdown"
@@ -43,7 +43,7 @@ const Admin = ({logout}) => (
 	<div className="dropdown">
 		<a
 			className="nav-link dropdown-toggle"
-			href=""
+			href="/#"
 			id="navbarDropdown"
 			role="button"
 			data-toggle="dropdown"

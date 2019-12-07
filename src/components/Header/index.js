@@ -51,7 +51,7 @@ class Header extends React.Component {
 				<nav className="navbar navbar-expand-lg navbar-light bg-light">
 					<div className="container">
 						<Link to="/">
-							<a className="navbar-brand">
+							<a href="/#" className="navbar-brand">
 								<img src={logo} alt="Лого" />
 							</a>
 						</Link>

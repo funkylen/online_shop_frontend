@@ -1,5 +1,4 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom';
 import * as api from '../api';
 import { loggedIn } from '../services/auth';
 import Product from '../components/Product';
