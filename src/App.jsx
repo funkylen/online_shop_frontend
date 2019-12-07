@@ -16,6 +16,7 @@ class App extends React.Component {
 					<Route path="/product/:id" component={pages.product} />
 					<Route path="/account/orders" component={pages.orders} />
 					<Route path="/account/settings" component={pages.settings} />
+					<Route path="/account/basket" component={pages.basket} />
 					<Route path="/account/add-product" component={pages.addProduct} />
 					<Route path="/account/add-category" component={pages.addCategory} />
 					<Route path="/login" component={pages.login} />

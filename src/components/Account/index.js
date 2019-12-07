@@ -24,6 +24,11 @@ class Account extends React.Component {
 								Настройки
 							</NavLink>
 						</div>
+            <div className="row mb-3">
+							<NavLink to="/account/basket" className="no-active-item" activeClassName="active-item">
+								Корзина
+							</NavLink>
+						</div>
 						<div className="row mb-3">
 							<NavLink
 								to="/account/add-category"

@@ -3,6 +3,7 @@ import React, { Fragment } from 'react';
 import Account from './components/Account';
 import Orders from './components/Account/Orders';
 import Settings from './components/Account/Settings';
+import Basket from './components/Account/Basket';
 import AddCategory from './components/Account/AddCategory';
 import AddProduct from './components/Account/AddProduct';
 
@@ -28,6 +29,12 @@ export const orders = ({ match }) => (
 export const settings = ({ match }) => (
 	<Account match={match}>
 		<Settings />
+	</Account>
+);
+
+export const basket = ({ match }) => (
+	<Account match={match}>
+		<Basket />
 	</Account>
 );
 
