@@ -1,7 +1,7 @@
 import React from 'react';
 import HeaderComponent from '../components/Header';
 import * as api from '../api';
-import { logout, loggedIn } from '../services/auth';
+import { logout, getRole } from '../services/auth';
 
 class Header extends React.Component {
 	state = {
@@ -16,7 +16,7 @@ class Header extends React.Component {
 		return (
 			<HeaderComponent
 				categories={this.state.categories}
-				loggedIn={loggedIn}
+				role={getRole()}
 				logout={logout}
 			/>
 		);
