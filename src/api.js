@@ -44,5 +44,5 @@ export const createCategory = () => axios.post('/category');
 export const editCategory = (id) => axios.put(`/category/${id}`);
 export const deleteCategory = (id) => axios.delete(`/category/${id}`);
 
-export const getProducts = () => axios.get('/product');
+export const getProducts = (page = 1) => axios.get(`/product?page=${page}`);
 export const getProduct = (id) => axios.get(`/product/${id}`);
