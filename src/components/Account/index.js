@@ -6,7 +6,7 @@ import './index.css';
 const Account = ({ username, role, children }) => (
 	<main className="container">
 		<div className="row align-items-center justify-content-start border-bottom pb-2 mb-3">
-			<h4>{username}</h4>
+			<h4 className="col-12">{username}</h4>
 		</div>
 
 		<div className="row align-items-start justify-content-start">
@@ -17,7 +17,7 @@ const Account = ({ username, role, children }) => (
 );
 
 const AdminMenu = () => (
-	<div className="col-lg-3 d-lg-block d-sm-none">
+	<div className="col-lg-3 d-lg-block d-none">
 		<div className="row mb-3">
 			<NavLink to="/account/add-category" className="no-active-item" activeClassName="active-item">
 				Добавить категорию
@@ -37,7 +37,7 @@ const AdminMenu = () => (
 );
 
 const UserMenu = () => (
-	<div className="col-lg-3 d-lg-block d-sm-none">
+	<div className="col-lg-3 d-lg-block d-none">
 		<div className="row mb-3">
 			<NavLink to="/account/basket" className="no-active-item" activeClassName="active-item">
 				Корзина

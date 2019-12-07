@@ -22,6 +22,7 @@ class App extends React.Component {
 			})
 			.catch(() => {
 				localStorage.clear();
+				if (window.location.pathname.includes('/account')) window.location.href = '/';
 				this.setState({ loading: false });
 			});
 	}

@@ -1,5 +1,7 @@
 import React from 'react';
 import * as auth from '../services/auth';
+import { handleChange } from '../services/handlers';
+import * as api from '../api';
 
 import Account from '../components/Account';
 import Basket from '../components/Account/Basket';
@@ -26,6 +28,48 @@ class AccountPage extends React.Component {
 	}
 }
 
+export class AddCategoryPage extends React.Component {
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			name: '',
+			errors: {},
+			success: false
+		};
+
+		this.handleSubmit = this.handleSubmit.bind(this);
+		this.handleChange = this.handleChange.bind(this);
+	}
+
+	handleSubmit(e) {
+		e.preventDefault();
+		this.setState({ success: false });
+		api
+			.createCategory(this.state.name)
+			.then((response) => this.setState({ name: response.data.name, success: true }))
+			.catch((error) => this.setState({ errors: error.response.data.errors }));
+	}
+
+	handleChange(e) {
+		handleChange(e, this);
+	}
+
+	render() {
+		return (
+			<AccountPage>
+				<AddCategory
+					handleSubmit={this.handleSubmit}
+					handleChange={this.handleChange}
+					success={this.state.success}
+					errors={this.state.errors}
+					name={this.state.name}
+				/>
+			</AccountPage>
+		);
+	}
+}
+
 export const OrdersPage = () => (
 	<AccountPage>
 		<Orders />
@@ -35,12 +79,6 @@ export const OrdersPage = () => (
 export const SettingsPage = () => (
 	<AccountPage>
 		<Settings />
-	</AccountPage>
-);
-
-export const AddCategoryPage = () => (
-	<AccountPage>
-		<AddCategory />
 	</AccountPage>
 );
 

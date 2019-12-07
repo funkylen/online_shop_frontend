@@ -1,6 +1,7 @@
 import React from 'react';
 import * as api from '../api';
 import { login } from '../services/auth';
+import { handleChange } from '../services/handlers';
 import Register from '../components/Register';
 
 class RegisterPage extends React.Component {
@@ -22,8 +23,7 @@ class RegisterPage extends React.Component {
 	}
 
 	handleChange(e) {
-		const { name, value } = e.target;
-		this.setState({ [name]: value });
+		handleChange(e, this);
 	}
 
 	handleSubmit(e) {
