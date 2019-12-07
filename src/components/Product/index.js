@@ -1,5 +1,5 @@
 import React from 'react';
-import ProductImage from '../../assets/img/product/product1.jpg';
+import Magnifier from "react-magnifier";
 
 
 class Product extends React.Component {
@@ -11,7 +11,7 @@ class Product extends React.Component {
         <div className="col-lg-5 mb-2">
           <div className="card" style={{minHeight: "430px"}}>
             <div className="card-body">
-              <img src={this.props.image} className="card-img-top" alt="Продукт"/>
+              <Magnifier src={this.props.image} minWidth={200} maxWidth={400} className="card-img-top" alt={this.props.name}/>
             </div>
           </div> 
         </div>
@@ -19,7 +19,7 @@ class Product extends React.Component {
         <div className="col-lg-5 mb-2">
           <div className="card"  style={{minHeight: "430px"}}>
             <div className="card-body">
-              <div className="row justify-content-around align-items-center" style={{marginBottom: "30px"}}>
+              <div className="row justify-content-around align-items-center" style={{marginBottom: "30px"}}> 
                 <div>
                   <p><strong>{this.props.name}</strong></p>
                 </div>

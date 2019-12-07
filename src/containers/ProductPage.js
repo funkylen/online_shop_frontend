@@ -20,17 +20,17 @@ class ProductPage extends React.Component {
 	}
 
 	render() {
-		return this.state.product === null ? (
-			<Loading />
-		) : (
-			<Product
-				name={this.state.product.name}
-				price={this.state.product.price}
-				description={this.state.product.description}
-				image={this.state.product.image}
-			/>
-		);
-	}
+    return this.state.product === null ? (
+      <Loading />
+    ) : (
+      <Product
+        name={this.state.product.name}
+        price={this.state.product.price}
+        description={this.state.product.description}
+        image={this.state.product.image}
+      />
+    );
+  }
 }
 
 export default ProductPage;
