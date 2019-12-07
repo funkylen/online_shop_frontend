@@ -5,7 +5,7 @@ import CategoryPage from './containers/CategoryPage';
 import ProductPage from './containers/ProductPage';
 import LoginPage from './containers/LoginPage';
 import RegisterPage from './containers/RegisterPage';
-import { OrdersPage, SettingsPage, AddProductPage, AddCategoryPage } from './containers/AccountPage';
+import { OrdersPage, SettingsPage, AddProductPage, AddCategoryPage, BasketPage } from './containers/AccountPage';
 
 export const index = () => <HomePage />;
 
@@ -25,8 +25,4 @@ export const login = () => <LoginPage />;
 
 export const register = () => <RegisterPage />;
 
-export const basket = ({ match }) => (
-	<Account match={match}>
-		<Basket />
-	</Account>
-);
+export const basket = () => <BasketPage />;

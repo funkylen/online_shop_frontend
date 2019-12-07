@@ -13,7 +13,7 @@ const Product = ({ image, name, price, description, addToBasket }) => (
 							minWidth={200}
 							maxWidth={400}
 							className="card-img-top"
-							alt={this.props.name}
+							alt={name}
 						/>
 					</div>
 				</div>

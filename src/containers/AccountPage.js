@@ -2,6 +2,7 @@ import React from 'react';
 import * as auth from '../services/auth';
 
 import Account from '../components/Account';
+import Basket from '../components/Account/Basket';
 import Orders from '../components/Account/Orders';
 import Settings from '../components/Account/Settings';
 import AddCategory from '../components/Account/AddCategory';
@@ -46,5 +47,11 @@ export const AddCategoryPage = () => (
 export const AddProductPage = () => (
 	<AccountPage>
 		<AddProduct />
+	</AccountPage>
+);
+
+export const BasketPage = () => (
+	<AccountPage>
+		<Basket />
 	</AccountPage>
 );
