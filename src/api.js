@@ -39,7 +39,7 @@ export const register = (email, password, surname, name, patronymic, phone) => {
 export const init = () => axios.get('/init');
 
 export const getCategories = () => axios.get('/category');
-export const getCategory = (id) => axios.get(`/category/${id}`);
+export const getCategory = (id, page = 1) => axios.get(`/category/${id}?page=${page}`);
 export const createCategory = () => axios.post('/category');
 export const editCategory = (id) => axios.put(`/category/${id}`);
 export const deleteCategory = (id) => axios.delete(`/category/${id}`);

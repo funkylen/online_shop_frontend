@@ -20,23 +20,8 @@ class Category extends React.Component {
 		return products;
 	}
 
-	getPageNumberButtons() {
-		if (this.props.products.data.length === 0) return null;
-
-		let pages = [];
-
-		for (let i = 1; i < this.props.products.last_page + 1; i++) {
-			pages.push(
-				<button key={`page_button_${i}`} type="button" className="btn btn-danger mx-2">
-					{i}
-				</button>
-			);
-		}
-
-		return pages;
-	}
-
 	render() {
+		const { getPreviousPageData, getNextPageData, firstPage, lastPage } = this.props;
 		return (
 			<main className="container">
 				<h3>{this.props.name}</h3>
@@ -46,7 +31,24 @@ class Category extends React.Component {
 					<button className="mx-3">По цене</button>
 				</div>
 				<div className="row mt-3">{this.getProducts()}</div>
-				<div className="d-flex justify-content-end my-5">{this.getPageNumberButtons()}</div>
+				<div className="d-flex justify-content-around my-5">
+					<button
+						onClick={getPreviousPageData}
+						disabled={firstPage ? true : false}
+						type="button"
+						className="btn btn-danger mx-2"
+					>
+						Предыдущая страница
+					</button>
+					<button
+						onClick={getNextPageData}
+						disabled={lastPage ? true : false}
+						type="button"
+						className="btn btn-danger mx-2"
+					>
+						Следующая страница
+					</button>
+				</div>
 			</main>
 		);
 	}
