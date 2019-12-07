@@ -1,6 +1,7 @@
 import React from 'react';
 import HeaderComponent from '../components/Header';
 import * as api from '../api';
+import { logout, getRole } from '../services/auth';
 
 class Header extends React.Component {
 	state = {
@@ -12,7 +13,13 @@ class Header extends React.Component {
 	}
 
 	render() {
-		return <HeaderComponent categories={this.state.categories} loggedIn={localStorage.getItem('token') !== null} />;
+		return (
+			<HeaderComponent
+				categories={this.state.categories}
+				role={getRole()}
+				logout={logout}
+			/>
+		);
 	}
 }
 

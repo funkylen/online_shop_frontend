@@ -1,10 +1,8 @@
 import React from 'react';
 
-const Category = ({ active, name }) => (
+const Category = ({ name }) => (
 	<li className="nav-item">
-		<a className="nav-link" href="#">
-			{name}
-		</a>
+		<span className="nav-link">{name}</span>
 	</li>
 );
 

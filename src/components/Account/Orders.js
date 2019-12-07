@@ -53,7 +53,7 @@ class Orders extends React.Component {
             <div className="row">
 
               <div className="col-sm-3 pt-3">
-                <img src={ProductImage} className="card-img" style={{ width: "100px" }} />
+                <img src={ProductImage} alt="Изображение товара" className="card-img" style={{ width: "100px" }} />
               </div>
 
               <div className="col-sm-9">

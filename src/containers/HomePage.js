@@ -4,22 +4,47 @@ import Loading from '../components/UI/Loading';
 import Home from '../components/Home';
 
 class HomePage extends React.Component {
-	state = {
-		products: null
-	};
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			products: null,
+			lastPage: null,
+			currentPage: null
+		};
+
+		this.getMoreProducts = this.getMoreProducts.bind(this);
+	}
 
 	getProducts() {
 		api
 			.getProducts()
-			.then((response) => this.setState({ products: response.data }))
+			.then((response) => {
+				this.setState({
+					products: response.data.data,
+					lastPage: response.data.last_page,
+					currentPage: response.data.current_page
+				});
+			})
 			.catch((err) => this.setState({ products: null }));
 	}
 
-	componentDidMount() {
-		this.getProducts();
+	getMoreProducts() {
+		api.getProducts(this.state.currentPage + 1).then((response) => {
+      const newProducts = response.data.data;
+      const products = this.state.products.concat(newProducts);
+
+    console.log(products);
+      
+			this.setState({
+				products: products,
+				lastPage: response.data.last_page,
+				currentPage: response.data.current_page
+			});
+		});
 	}
 
-	componentWillReceiveProps() {
+	componentDidMount() {
 		this.getProducts();
 	}
 
@@ -28,8 +53,9 @@ class HomePage extends React.Component {
 			<Loading />
 		) : (
 			<Home
-				products={this.state.products.data}
-				lastPage={this.state.products.last_page === this.state.products.current_page}
+				products={this.state.products}
+        lastPage={this.state.lastPage === this.state.currentPage}
+        getMoreProducts={this.getMoreProducts}
 			/>
 		);
 	}

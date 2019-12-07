@@ -13,7 +13,6 @@ class Home extends React.Component {
 					name={element.name}
 					description={element.description}
 					price={element.price}
-					fav={false}
 				/>
 			);
 		});
@@ -24,7 +23,7 @@ class Home extends React.Component {
 	render() {
 		const getMoreButton = !this.props.lastPage ? (
 			<div className="d-flex justify-content-center my-5">
-				<button type="button" className="btn btn-danger">
+				<button onClick={this.props.getMoreProducts} type="button" className="btn btn-danger">
 					Показать больше
 				</button>
 			</div>
@@ -33,7 +32,7 @@ class Home extends React.Component {
 		return (
 			<main className="container">
 				<h3>Наши товары</h3>
-				<div className="row">{this.getProducts()}</div>
+				<div className="row align-items-start">{this.getProducts()}</div>
 				{getMoreButton}
 			</main>
 		);

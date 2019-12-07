@@ -3,7 +3,6 @@ import { Link, NavLink } from 'react-router-dom';
 import './index.css';
 import logo from '../../assets/img/logo.png';
 import Category from './Category';
-// import DropdownCategory from './DropdownCategory';
 import Account from './Account';
 
 class Header extends React.Component {
@@ -40,11 +39,7 @@ class Header extends React.Component {
 							<span className="navbar-toggler-icon" />
 						</button>
 
-						<div
-							className="collapse navbar-collapse overflow-auto"
-							id="navbarSupportedContent"
-							style={{ textAlign: 'center' }}
-						>
+						<div className="collapse navbar-collapse categories-navbar" id="navbarSupportedContent">
 							<ul className="navbar-nav mx-auto">{categories}</ul>
 						</div>
 					</div>
@@ -56,7 +51,7 @@ class Header extends React.Component {
 				<nav className="navbar navbar-expand-lg navbar-light bg-light">
 					<div className="container">
 						<Link to="/">
-							<a className="navbar-brand">
+							<a href="/#" className="navbar-brand">
 								<img src={logo} alt="Лого" />
 							</a>
 						</Link>
@@ -68,7 +63,7 @@ class Header extends React.Component {
 								aria-label="Search"
 							/>
 						</form>
-						<Account loggedIn={this.props.loggedIn} />
+						<Account role={this.props.role} logout={this.props.logout} />
 					</div>
 				</nav>
 

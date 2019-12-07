@@ -1,13 +1,35 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import * as pages from './pages';
+import * as api from './api';
+import * as auth from './services/auth';
 
+import Loading from './components/UI/Loading';
 import Header from './containers/Header';
 import Footer from './components/Footer';
 
 class App extends React.Component {
+	state = {
+		loading: true
+	};
+
+	componentDidMount() {
+		api
+			.init()
+			.then((response) => {
+				auth.init(response.data);
+				this.setState({ loading: false });
+			})
+			.catch(() => {
+				localStorage.clear();
+				this.setState({ loading: false });
+			});
+	}
+
 	render() {
-		return (
+		return this.state.loading ? (
+			<Loading />
+		) : (
 			<Router>
 				<Header />
 				<Switch>
