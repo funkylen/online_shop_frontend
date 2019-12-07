@@ -12,6 +12,7 @@ class Home extends React.Component {
 					id={element.id}
 					name={element.name}
 					description={element.description}
+					image={'/img/' + element.image}
 					price={element.price}
 				/>
 			);

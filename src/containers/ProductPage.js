@@ -36,7 +36,7 @@ class ProductPage extends React.Component {
 				name={this.state.product.name}
 				price={this.state.product.price}
 				description={this.state.product.description}
-				image={this.state.product.image}
+				image={'/img/' + this.state.product.image}
 				addToBasket={this.addToBasket}
 			/>
 		);
