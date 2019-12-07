@@ -1,5 +1,7 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom';
 import * as api from '../api';
+import { loggedIn } from '../services/auth';
 import Product from '../components/Product';
 import Loading from '../components/UI/Loading';
 
@@ -19,6 +21,14 @@ class ProductPage extends React.Component {
 		this.getProduct(this.props.id);
 	}
 
+	addToBasket() {
+		if (loggedIn()) {
+			alert('Товар добавлен в корзину');
+		} else {
+			window.location.href = '/login';
+		}
+	}
+
 	render() {
 		return this.state.product === null ? (
 			<Loading />
@@ -28,6 +38,7 @@ class ProductPage extends React.Component {
 				price={this.state.product.price}
 				description={this.state.product.description}
 				image={this.state.product.image}
+				addToBasket={this.addToBasket}
 			/>
 		);
 	}
