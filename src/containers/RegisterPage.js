@@ -14,7 +14,7 @@ class RegisterPage extends React.Component {
 			name: '',
 			patronymic: '',
 			phone: '',
-			error: ''
+			errors: {}
 		};
 
 		this.handleChange = this.handleChange.bind(this);
@@ -40,11 +40,13 @@ class RegisterPage extends React.Component {
 			.then((response) => {
 				login(response.data.api_token);
 			})
-			.catch((error) => this.setState({ error: 'Здарова бандиты' }));
+			.catch((error) => this.setState({ errors: error.response.data.errors }));
 	}
 
 	render() {
-		return <Register error={this.state.error} handleChange={this.handleChange} handleSubmit={this.handleSubmit} />;
+		return (
+			<Register errors={this.state.errors} handleChange={this.handleChange} handleSubmit={this.handleSubmit} />
+		);
 	}
 }
 
