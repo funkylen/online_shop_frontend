@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Account = ({ loggedIn }) => {
-	if (loggedIn) {
+const Account = ({ loggedIn, logout }) => {
+	if (loggedIn()) {
 		return (
 			<div className="dropdown">
 				<a
@@ -26,7 +26,7 @@ const Account = ({ loggedIn }) => {
 					<Link to="/account/settings" className="dropdown-item">
 						Настройки
 					</Link>
-					<Link to="/logout" className="dropdown-item">
+					<Link onClick={logout} className="dropdown-item">
 						Выход
 					</Link>
 				</div>

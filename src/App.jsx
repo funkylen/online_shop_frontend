@@ -1,11 +1,22 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import * as pages from './pages';
+import * as api from './api';
+import * as auth from './services/auth';
 
 import Header from './containers/Header';
 import Footer from './components/Footer';
 
 class App extends React.Component {
+	componentDidMount() {
+		api
+			.init()
+			.then((response) => {
+				auth.init(response.data.role);
+			})
+			.catch(() => localStorage.clear());
+	}
+
 	render() {
 		return (
 			<Router>

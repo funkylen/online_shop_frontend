@@ -1,6 +1,7 @@
 import React from 'react';
 import * as api from '../api';
 import Login from '../components/Login';
+import { login } from '../services/auth';
 
 class LoginPage extends React.Component {
 	constructor(props) {
@@ -25,19 +26,18 @@ class LoginPage extends React.Component {
 
 	handleSubmit(e) {
 		e.preventDefault();
-		api.login(this.state.email, this.state.password).then((response) => {
-			localStorage.setItem('token', response.data.api_token);
-			window.location.href = '/';
-		});
+		api
+			.login(this.state.email, this.state.password)
+			.then((response) => {
+				login(response.data.api_token);
+			})
+			.catch((error) => this.setState({error: error.response.data.error}));
 	}
 
 	render() {
-		const { email, password, error } = this.state;
 		return (
 			<Login
-				email={email}
-				password={password}
-				error={error}
+				error={this.state.error}
 				handleChange={this.handleChange}
 				handleSubmit={this.handleSubmit}
 			/>
