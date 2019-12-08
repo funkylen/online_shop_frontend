@@ -6,7 +6,7 @@ const BasketProductCard = ({id, name, price, description, count, image, removeIt
 	<div className="card mb-4" style={{ padding: '10px', minWidth: '200px' }}>
 		<div className="row no-gutters align-items-center">
 			<div className="col-md-3">
-				<img src={image} alt="Изображение товара" className="card-img" alt="..." />
+				<img src={`/${image}`} alt="Изображение товара" className="card-img" alt="..." />
 			</div>
 			<div className="col-md-7">
 				<div className="card-body">
