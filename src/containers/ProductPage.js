@@ -1,13 +1,24 @@
 import React from 'react';
 import * as api from '../api';
 import { loggedIn } from '../services/auth';
+import * as basket from '../services/basket';
+import { handleChange } from '../services/handlers';
 import Product from '../components/Product';
 import Loading from '../components/UI/Loading';
 
 class ProductPage extends React.Component {
-	state = {
-		product: null
-	};
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			product: null,
+			count: 1,
+			inBasket: false
+		};
+
+		this.addToBasket = this.addToBasket.bind(this);
+		this.handleChange = this.handleChange.bind(this);
+	}
 
 	getProduct(id) {
 		api
@@ -18,11 +29,18 @@ class ProductPage extends React.Component {
 
 	componentDidMount() {
 		this.getProduct(this.props.id);
+		const basketItems = basket.get();
+		if (basketItems[this.props.id]) this.setState({ inBasket: true });
+	}
+
+	handleChange(e) {
+		handleChange(e, this);
 	}
 
 	addToBasket() {
 		if (loggedIn()) {
-			alert('Товар добавлен в корзину');
+			basket.addItem(this.props.id, this.state.count);
+			this.setState({ inBasket: true });
 		} else {
 			window.location.href = '/login';
 		}
@@ -38,6 +56,8 @@ class ProductPage extends React.Component {
 				description={this.state.product.description}
 				image={this.state.product.image}
 				addToBasket={this.addToBasket}
+				handleChange={this.handleChange}
+				inBasket={this.state.inBasket}
 			/>
 		);
 	}

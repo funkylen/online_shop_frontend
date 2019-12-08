@@ -1,8 +1,10 @@
 import React from 'react';
 import * as auth from '../services/auth';
+import * as basket from '../services/basket';
 import { handleChange } from '../services/handlers';
 import * as api from '../api';
 
+import Loading from '../components/UI/Loading';
 import Account from '../components/Account';
 import Basket from '../components/Account/Basket';
 import Orders from '../components/Account/Orders';
@@ -110,7 +112,7 @@ export class AddProductPage extends React.Component {
 		e.preventDefault();
 		this.setState({ success: false });
 		const { name, price, categoryId, image, description } = this.state;
-		
+
 		api
 			.createProduct(name, price, categoryId, image, description)
 			.then((response) => this.setState({ name: response.data.name, success: true }))
@@ -118,7 +120,7 @@ export class AddProductPage extends React.Component {
 	}
 
 	handleImageChange(e) {
-		this.setState({'image': e.target.files[0]});
+		this.setState({ image: e.target.files[0] });
 	}
 
 	handleChange(e) {
@@ -155,8 +157,51 @@ export const SettingsPage = () => (
 	</AccountPage>
 );
 
-export const BasketPage = () => (
-	<AccountPage>
-		<Basket />
-	</AccountPage>
-);
+export class BasketPage extends React.Component {
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			products: [],
+			success: false,
+			loading: true
+		};
+
+		this.removeItem = this.removeItem.bind(this);
+	}
+
+	componentDidMount() {
+		const items = basket.get();
+
+		Object.keys(items).forEach((id) => {
+			api.getProduct(id).then((response) => {
+				const products = this.state.products;
+				let product = response.data;
+				product.count = items[id];
+				products[id] = product;
+				this.setState({ products: products });
+			});
+		});
+
+		this.setState({ loading: false });
+	}
+
+	removeItem(id) {
+		basket.removeItem(id);
+
+		const products = this.state.products;
+
+		delete products[id];
+
+		this.setState({ products: products });
+	}
+
+	render() {
+		if (this.state.loading) return <Loading />;
+		return (
+			<AccountPage>
+				<Basket products={Object.values(this.state.products)} removeItem={this.removeItem} />
+			</AccountPage>
+		);
+	}
+}

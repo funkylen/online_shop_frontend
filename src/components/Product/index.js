@@ -2,7 +2,7 @@ import React from 'react';
 import Magnifier from 'react-magnifier';
 import './index.css';
 
-const Product = ({ image, name, price, description, addToBasket }) => (
+const Product = ({ image, name, price, description, addToBasket, handleChange, inBasket }) => (
 	<main className="container">
 		<div className="row align-items-center justify-content-around">
 			<div className="col-lg-5 mb-2">
@@ -47,6 +47,8 @@ const Product = ({ image, name, price, description, addToBasket }) => (
 							<div className="col-sm">
 								<div className="form-group">
 									<input
+										onChange={handleChange}
+										name="count"
 										className="form-control"
 										type="number"
 										placeholder="1"
@@ -68,8 +70,8 @@ const Product = ({ image, name, price, description, addToBasket }) => (
 						</div>
 
 						<div className="row justify-content-around align-items-center ml-2">
-							<button onClick={addToBasket} type="button" className="btn btn-danger">
-								Добавить в корзину
+							<button onClick={addToBasket} type="button" className="btn btn-danger" disabled={inBasket}>
+								{inBasket ? 'В корзине' : 'Добавить в корзину'}
 							</button>
 						</div>
 					</div>
