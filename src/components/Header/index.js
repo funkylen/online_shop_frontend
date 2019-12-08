@@ -55,10 +55,12 @@ class Header extends React.Component {
 								<img src={logo} alt="Лого" />
 							</a>
 						</Link>
-						<form className="form-inline">
+						<form className="form-inline" onSubmit={this.props.handleSearchSubmit}>
 							<input
+								onChange={this.props.handleChange}
 								className="form-control"
 								type="search"
+								name="search"
 								placeholder="Поиск по товарам"
 								aria-label="Search"
 							/>

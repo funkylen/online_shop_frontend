@@ -1,8 +1,8 @@
 import axios from 'axios';
 import * as auth from './services/auth';
 
-axios.defaults.baseURL = 'https://youngview.herokuapp.com/api';
-// axios.defaults.baseURL = 'http://localhost:8080/api';
+// axios.defaults.baseURL = 'https://youngview.herokuapp.com/api';
+axios.defaults.baseURL = 'http://localhost:8080/api';
 
 axios.defaults.headers.common = auth.loggedIn()
 	? {
@@ -47,7 +47,6 @@ export const deleteCategory = (id) => axios.delete(`/category/${id}`);
 export const getProducts = (page = 1) => axios.get(`/product?page=${page}`);
 export const getProduct = (id) => axios.get(`/product/${id}`);
 export const createProduct = (name, price, categoryId, image, description) => {
-
 	const fd = new FormData();
 
 	if (name) fd.append('name', name);
@@ -58,3 +57,4 @@ export const createProduct = (name, price, categoryId, image, description) => {
 
 	return axios.post('/product', fd);
 };
+export const searchProducts = (name, page = 1) => axios.get(`/product?name=${name}&page=${page}`);
