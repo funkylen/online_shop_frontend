@@ -37,7 +37,8 @@ export class AddCategoryPage extends React.Component {
 		this.state = {
 			name: '',
 			errors: {},
-			success: false
+			success: false,
+			successName: null
 		};
 
 		this.handleSubmit = this.handleSubmit.bind(this);
@@ -49,7 +50,7 @@ export class AddCategoryPage extends React.Component {
 		this.setState({ success: false });
 		api
 			.createCategory(this.state.name)
-			.then((response) => this.setState({ name: response.data.name, success: true }))
+			.then((response) => this.setState({ successName: response.data.name, success: true }))
 			.catch((error) => this.setState({ errors: error.response.data.errors }));
 	}
 
@@ -65,7 +66,7 @@ export class AddCategoryPage extends React.Component {
 					handleChange={this.handleChange}
 					success={this.state.success}
 					errors={this.state.errors}
-					name={this.state.name}
+					successName={this.state.successName}
 				/>
 			</AccountPage>
 		);
