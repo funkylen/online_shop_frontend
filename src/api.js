@@ -37,6 +37,16 @@ export const register = (email, password, surname, name, patronymic, phone) => {
 };
 
 export const init = () => axios.get('/init');
+export const updateProfile = (surname, name, patronymic, phone) => {
+	let data = {};
+
+	if (surname) data.surname = surname;
+	if (name) data.name = name;
+	if (patronymic) data.patronymic = patronymic;
+	if (phone) data.phone = phone;
+
+	return axios.post('/user', data);
+};
 
 export const getCategories = () => axios.get('/category');
 export const getCategory = (id, page = 1) => axios.get(`/category/${id}?page=${page}`);
