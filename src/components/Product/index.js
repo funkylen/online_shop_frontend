@@ -9,7 +9,7 @@ const Product = ({ image, name, price, description, handleChange, role, addToBas
 				<div className="card" style={{ minHeight: '430px' }}>
 					<div className="card-body">
 						<Magnifier
-							src={`/${image}`}
+							src={image}
 							minWidth={200}
 							maxWidth={400}
 							className="card-img-top"

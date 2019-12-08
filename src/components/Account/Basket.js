@@ -2,11 +2,16 @@ import React from 'react';
 
 import Bin from '../../assets/img/bin.svg';
 
-const BasketProductCard = ({id, name, price, description, count, image, removeItem}) => (
+const BasketProductCard = ({ id, name, price, description, count, image, removeItem }) => (
 	<div className="card mb-4" style={{ padding: '10px', minWidth: '200px' }}>
 		<div className="row no-gutters align-items-center">
 			<div className="col-md-3">
-				<img src={`/${image}`} alt="Изображение товара" className="card-img" alt="..." />
+				<img
+					src={image}
+					alt="Изображение товара"
+					className="card-img"
+					alt="..."
+				/>
 			</div>
 			<div className="col-md-7">
 				<div className="card-body">
@@ -17,7 +22,12 @@ const BasketProductCard = ({id, name, price, description, count, image, removeIt
 				</div>
 			</div>
 			<div className="col-md-2" style={{ textAlign: 'center' }}>
-				<button onClick={() => removeItem(id)} type="button" className="btn btn-light" style={{ textAlign: 'center' }}>
+				<button
+					onClick={() => removeItem(id)}
+					type="button"
+					className="btn btn-light"
+					style={{ textAlign: 'center' }}
+				>
 					<img src={Bin} alt="Удалить" />
 					<p className="card-text">
 						<small class="text-muted">Удалить</small>
@@ -54,18 +64,20 @@ class Basket extends React.Component {
 
 		console.log(this.props);
 
-		this.props.products.forEach(element => products.push(
-			<BasketProductCard 
-				key={`basket_item_${element.id}`}
-				id = {element.id}
-				name = {element.name}
-				price = {element.price}
-				description = {element.description}
-				image = {element.image}
-				count = {element.count}
-				removeItem={this.props.removeItem}
-			/>
-		))
+		this.props.products.forEach((element) =>
+			products.push(
+				<BasketProductCard
+					key={`basket_item_${element.id}`}
+					id={element.id}
+					name={element.name}
+					price={element.price}
+					description={element.description}
+					image={element.image}
+					count={element.count}
+					removeItem={this.props.removeItem}
+				/>
+			)
+		);
 
 		return products;
 	}

@@ -6,7 +6,11 @@ const ProductCard = ({ id, image, name, description, price }) => (
 	<div className="my-3 mx-auto product-card">
 		<Link to={`/product/${id}`}>
 			<div className="card p-2" style={{ width: '250px', height: '500px' }}>
-				<img src={`/${image}`} className="card-img-top" alt="Изображение товара" />
+				<img
+					src={image}
+					className="card-img-top"
+					alt="Изображение товара"
+				/>
 				<div className="card-body">
 					<h5 className="card-title">{name}</h5>
 					<p className="card-text description">{description}</p>

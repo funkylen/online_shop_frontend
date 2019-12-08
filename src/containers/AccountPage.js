@@ -83,6 +83,8 @@ export class AddProductPage extends React.Component {
 			price: '',
 			categoryId: '',
 			description: '',
+			image: null,
+			imageInput: 'url',
 			errors: {},
 			success: false,
 			successName: null,
@@ -94,6 +96,7 @@ export class AddProductPage extends React.Component {
 		this.handleSubmit = this.handleSubmit.bind(this);
 		this.handleChange = this.handleChange.bind(this);
 		this.handleImageChange = this.handleImageChange.bind(this);
+		this.handleChangeImageInput = this.handleChangeImageInput.bind(this);
 	}
 
 	componentDidMount() {
@@ -111,13 +114,20 @@ export class AddProductPage extends React.Component {
 		});
 	}
 
+	handleChangeImageInput(e) {
+		this.setState({
+			imageInput: e.target.value,
+			image: null
+		});
+	}
+
 	handleSubmit(e) {
 		e.preventDefault();
 		this.setState({ success: false });
-		const { name, price, categoryId, image, description } = this.state;
+		const { name, price, categoryId, description, imageInput, image } = this.state;
 
 		api
-			.createProduct(name, price, categoryId, image, description)
+			.createProduct(name, price, categoryId, description, imageInput, image)
 			.then((response) => {
 				document.getElementById('add_product_form').reset();
 				this.setState({ successId: response.data.id, successName: response.data.name, success: true });
@@ -142,12 +152,14 @@ export class AddProductPage extends React.Component {
 					handleSubmit={this.handleSubmit}
 					handleChange={this.handleChange}
 					handleImageChange={this.handleImageChange}
+					handleChangeImageInput={this.handleChangeImageInput}
 					success={this.state.success}
 					successName={this.state.successName}
 					successId={this.state.successId}
 					errors={this.state.errors}
 					name={this.state.name}
 					categories={this.state.categories}
+					imageInput={this.state.imageInput}
 				/>
 			</AccountPage>
 		);
