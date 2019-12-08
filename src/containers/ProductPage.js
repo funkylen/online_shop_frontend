@@ -29,14 +29,14 @@ class ProductPage extends React.Component {
 	}
 
 	render() {
-		return this.state.product === null ? (
-			<Loading />
-		) : (
+		if (this.state.product === null) return <Loading />;
+
+		return (
 			<Product
 				name={this.state.product.name}
 				price={this.state.product.price}
 				description={this.state.product.description}
-				image={'/img/' + this.state.product.image}
+				image={this.state.product.image}
 				addToBasket={this.addToBasket}
 			/>
 		);

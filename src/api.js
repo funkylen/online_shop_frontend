@@ -46,3 +46,15 @@ export const deleteCategory = (id) => axios.delete(`/category/${id}`);
 
 export const getProducts = (page = 1) => axios.get(`/product?page=${page}`);
 export const getProduct = (id) => axios.get(`/product/${id}`);
+export const createProduct = (name, price, categoryId, image, description) => {
+
+	const fd = new FormData();
+
+	if (name) fd.append('name', name);
+	if (price) fd.append('price', price);
+	if (categoryId) fd.append('category_id', categoryId);
+	if (image) fd.append('image_file', image);
+	if (description) fd.append('description', description);
+
+	return axios.post('/product', fd);
+};

@@ -6,7 +6,8 @@ import './index.css';
 const Account = ({ username, role, children }) => (
 	<main className="container">
 		<div className="row align-items-center justify-content-start border-bottom pb-2 mb-3">
-			<h4 className="col-12">{username}</h4>
+			<h4 className="col-12 d-lg-none">{username}</h4>
+			<h4 className="d-none d-lg-block">{username}</h4>
 		</div>
 
 		<div className="row align-items-start justify-content-start">

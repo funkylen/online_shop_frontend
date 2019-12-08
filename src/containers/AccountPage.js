@@ -70,6 +70,79 @@ export class AddCategoryPage extends React.Component {
 	}
 }
 
+export class AddProductPage extends React.Component {
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			categories: [],
+			name: '',
+			price: '',
+			categoryId: '',
+			description: '',
+			errors: {},
+			success: false
+		};
+
+		this.fd = new FormData();
+
+		this.handleSubmit = this.handleSubmit.bind(this);
+		this.handleChange = this.handleChange.bind(this);
+		this.handleImageChange = this.handleImageChange.bind(this);
+	}
+
+	componentDidMount() {
+		api.getCategories().then((response) => {
+			const categories = [];
+			response.data.forEach((element) => {
+				categories.push(
+					<option key={`category_id-${element.id}`} value={element.id}>
+						{element.name}
+					</option>
+				);
+			});
+
+			this.setState({ categories: categories });
+		});
+	}
+
+	handleSubmit(e) {
+		e.preventDefault();
+		this.setState({ success: false });
+		const { name, price, categoryId, image, description } = this.state;
+		
+		api
+			.createProduct(name, price, categoryId, image, description)
+			.then((response) => this.setState({ name: response.data.name, success: true }))
+			.catch((error) => this.setState({ errors: error.response.data.errors }));
+	}
+
+	handleImageChange(e) {
+		this.setState({'image': e.target.files[0]});
+	}
+
+	handleChange(e) {
+		handleChange(e, this);
+	}
+
+	render() {
+		console.log(this.state);
+		return (
+			<AccountPage>
+				<AddProduct
+					handleSubmit={this.handleSubmit}
+					handleChange={this.handleChange}
+					handleImageChange={this.handleImageChange}
+					success={this.state.success}
+					errors={this.state.errors}
+					name={this.state.name}
+					categories={this.state.categories}
+				/>
+			</AccountPage>
+		);
+	}
+}
+
 export const OrdersPage = () => (
 	<AccountPage>
 		<Orders />
@@ -79,12 +152,6 @@ export const OrdersPage = () => (
 export const SettingsPage = () => (
 	<AccountPage>
 		<Settings />
-	</AccountPage>
-);
-
-export const AddProductPage = () => (
-	<AccountPage>
-		<AddProduct />
 	</AccountPage>
 );
 
