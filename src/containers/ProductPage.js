@@ -5,6 +5,7 @@ import * as basket from '../services/basket';
 import { handleChange } from '../services/handlers';
 import Product from '../components/Product';
 import Loading from '../components/UI/Loading';
+import * as auth from '../services/auth.js';
 
 class ProductPage extends React.Component {
 	constructor(props) {
@@ -54,7 +55,8 @@ class ProductPage extends React.Component {
 				name={this.state.product.name}
 				price={this.state.product.price}
 				description={this.state.product.description}
-				image={this.state.product.image}
+        image={this.state.product.image}
+        role={auth.getRole()}
 				addToBasket={this.addToBasket}
 				handleChange={this.handleChange}
 				inBasket={this.state.inBasket}
