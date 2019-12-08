@@ -84,7 +84,9 @@ export class AddProductPage extends React.Component {
 			categoryId: '',
 			description: '',
 			errors: {},
-			success: false
+			success: false,
+			successName: null,
+			successId: null
 		};
 
 		this.fd = new FormData();
@@ -105,7 +107,7 @@ export class AddProductPage extends React.Component {
 				);
 			});
 
-			this.setState({ categories: categories });
+			this.setState({ categories: categories, categoryId: response.data[0].id });
 		});
 	}
 
@@ -116,8 +118,13 @@ export class AddProductPage extends React.Component {
 
 		api
 			.createProduct(name, price, categoryId, image, description)
-			.then((response) => this.setState({ name: response.data.name, success: true }))
-			.catch((error) => this.setState({ errors: error.response.data.errors }));
+			.then((response) => {
+				document.getElementById('add_product_form').reset();
+				this.setState({ successId: response.data.id, successName: response.data.name, success: true });
+			})
+			.catch((error) => {
+				this.setState({ errors: error.response.data.errors });
+			});
 	}
 
 	handleImageChange(e) {
@@ -129,7 +136,6 @@ export class AddProductPage extends React.Component {
 	}
 
 	render() {
-		console.log(this.state);
 		return (
 			<AccountPage>
 				<AddProduct
@@ -137,6 +143,8 @@ export class AddProductPage extends React.Component {
 					handleChange={this.handleChange}
 					handleImageChange={this.handleImageChange}
 					success={this.state.success}
+					successName={this.state.successName}
+					successId={this.state.successId}
 					errors={this.state.errors}
 					name={this.state.name}
 					categories={this.state.categories}
