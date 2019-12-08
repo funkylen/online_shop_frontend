@@ -2,6 +2,7 @@ import React from 'react';
 import * as basket from '../../services/basket';
 
 import Bin from '../../assets/img/bin.svg';
+import Empty from '../../components/UI/Empty';
 
 class BasketProductCard extends React.Component {
 	constructor(props) {
@@ -56,7 +57,12 @@ class BasketProductCard extends React.Component {
 						<p className="card-text">Количество:</p>
 					</div>
 					<div className="col-sm" style={{ textAlign: 'center' }}>
-						<input type="number" onChange={this.handleChange} value={this.state.count} style={{ width: '110px', borderRadius: '3px' }} />
+						<input
+							type="number"
+							onChange={this.handleChange}
+							value={this.state.count}
+							style={{ width: '110px', borderRadius: '3px' }}
+						/>
 					</div>
 				</div>
 				<hr />
@@ -97,11 +103,25 @@ class Basket extends React.Component {
 	}
 
 	render() {
+		const products = this.getProducts();
+
+		if (products.length === 0 && this.props.orderSuccess)
+			return (
+				<div>
+					<div className="alert alert-success" hidden={!this.props.orderSuccess}>
+						Заказ успешно оплачен
+					</div>
+					<Empty />
+				</div>
+			);
+
+		if (products.length === 0) return <Empty />;
+
 		return (
 			<div className="container mt-1" style={{ padding: '0px' }}>
 				<div className="row justify-content-center">
-					{this.getProducts()}
-					<button type="button" className="btn btn-danger">
+					{products}
+					<button onClick={this.props.makeOrder} type="button" className="btn btn-danger">
 						Купить
 					</button>
 				</div>

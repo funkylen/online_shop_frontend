@@ -61,5 +61,5 @@ export const createProduct = (name, price, categoryId, description, imageType, i
 };
 export const searchProducts = (name, page = 1) => axios.get(`/product?name=${name}&page=${page}`);
 
-export const getOrders = () => axios.get('/orders');
-export const createOrders = (orders) => axios.post('/orders', { orders: JSON.stringify(orders) });
+export const getOrders = () => axios.get('/order');
+export const makeOrder = (order) => axios.post('/order', { order: JSON.stringify(order) });
