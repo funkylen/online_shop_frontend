@@ -1,6 +1,7 @@
 import React from 'react';
 import * as api from '../api';
 import Loading from '../components/UI/Loading';
+import Empty from '../components/UI/Empty';
 import Home from '../components/Home';
 
 class HomePage extends React.Component {
@@ -47,9 +48,9 @@ class HomePage extends React.Component {
 	}
 
 	render() {
-		return this.state.products === null ? (
-			<Loading />
-		) : (
+		if (this.state.products === null) return <Loading />;
+		if (this.state.products.length === 0) return <Empty />;
+		return (
 			<Home
 				products={this.state.products}
 				lastPage={this.state.lastPage === this.state.currentPage}

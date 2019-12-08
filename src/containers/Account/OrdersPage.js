@@ -24,8 +24,8 @@ class OrdersPage extends React.Component {
 					key={`order_id_${element.id}`}
 					id={element.id}
 					date={element.created_at}
-                    products={element.products}
-                    orderSum={orderSum}
+					products={element.products}
+					orderSum={orderSum}
 				/>
 			);
 		});
@@ -33,8 +33,18 @@ class OrdersPage extends React.Component {
 	}
 
 	render() {
-		if (this.state.orders === null) return <Loading />;
-		if (this.state.orders.length === 0) return <Empty />;
+		if (this.state.orders === null)
+			return (
+				<AccountPage>
+					<Loading />
+				</AccountPage>
+			);
+		if (this.state.orders.length === 0)
+			return (
+				<AccountPage>
+					<Empty />
+				</AccountPage>
+			);
 
 		console.log(this.state);
 		return <AccountPage>{this.getOrders()}</AccountPage>;
