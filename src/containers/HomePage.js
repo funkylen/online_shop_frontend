@@ -31,11 +31,9 @@ class HomePage extends React.Component {
 
 	getMoreProducts() {
 		api.getProducts(this.state.currentPage + 1).then((response) => {
-      const newProducts = response.data.data;
-      const products = this.state.products.concat(newProducts);
+			const newProducts = response.data.data;
+			const products = this.state.products.concat(newProducts);
 
-    console.log(products);
-      
 			this.setState({
 				products: products,
 				lastPage: response.data.last_page,
@@ -54,8 +52,8 @@ class HomePage extends React.Component {
 		) : (
 			<Home
 				products={this.state.products}
-        lastPage={this.state.lastPage === this.state.currentPage}
-        getMoreProducts={this.getMoreProducts}
+				lastPage={this.state.lastPage === this.state.currentPage}
+				getMoreProducts={this.getMoreProducts}
 			/>
 		);
 	}

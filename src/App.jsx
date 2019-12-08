@@ -44,6 +44,7 @@ class App extends React.Component {
 					<Route path="/account/add-category" component={pages.addCategory} />
 					<Route path="/login" component={pages.login} />
 					<Route path="/register" component={pages.register} />
+					<Route path="/search" component={pages.search} />
 				</Switch>
 				<Footer />
 			</Router>

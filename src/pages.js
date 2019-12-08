@@ -6,6 +6,7 @@ import ProductPage from './containers/ProductPage';
 import LoginPage from './containers/LoginPage';
 import RegisterPage from './containers/RegisterPage';
 import { OrdersPage, SettingsPage, AddProductPage, AddCategoryPage, BasketPage } from './containers/AccountPage';
+import SearchPage from './containers/SearchPage';
 
 export const index = () => <HomePage />;
 
@@ -13,16 +14,18 @@ export const category = ({ match }) => <CategoryPage id={match.params.id} />;
 
 export const product = ({ match }) => <ProductPage id={match.params.id} />;
 
-export const orders = () => <OrdersPage />
+export const orders = () => <OrdersPage />;
 
-export const settings = () => <SettingsPage />
+export const settings = () => <SettingsPage />;
 
-export const addCategory = () => <AddCategoryPage />
+export const addCategory = () => <AddCategoryPage />;
 
-export const addProduct = () => <AddProductPage />
+export const addProduct = () => <AddProductPage />;
 
 export const login = () => <LoginPage />;
 
 export const register = () => <RegisterPage />;
 
 export const basket = () => <BasketPage />;
+
+export const search = ({ location }) => <SearchPage search={location.search} />;

@@ -32,7 +32,7 @@ class Home extends React.Component {
 
 		return (
 			<main className="container">
-				<h3>Наши товары</h3>
+				<h3>{this.props.headerText ? this.props.headerText : 'Наши товары'}</h3>
 				<div className="row align-items-start">{this.getProducts()}</div>
 				{getMoreButton}
 			</main>
