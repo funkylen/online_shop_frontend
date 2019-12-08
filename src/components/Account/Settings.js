@@ -1,60 +1,40 @@
 import React from 'react';
 
-class Settings extends React.Component {
-  render() {
-    return (
-      <div className="card mt-1" style={{minWidth:"200px"}}>
-        <div className="card-body">
-          <h5 className="card-title">Мои данные</h5>
+const Settings = ({ name, surname, patronymic, email, phone }) => (
+	<div className="card mt">
+		<div className="card-body">
+			<h5 className="card-title">Мои данные</h5>
 
-          <form>
-            <div className="row justify-content-start align-items-center pl-3 pr-3 mb-4">
-              <div className="row">
+			<form>
+				<div className="form-group">
+					<label>Фамилия</label>
+					<input type="text" name="surname" value={surname} className="form-control" placeholder="Иванов" />
+				</div>
+				<div className="form-group">
+					<label>Имя</label>
+					<input type="text" name="name" value={name} className="form-control" placeholder="Иван" />
+				</div>
+				<div className="form-group">
+					<label>Отчество</label>
+					<input type="text" name="patronymic" value={patronymic} className="form-control" placeholder="Иванович" />
+				</div>
+				<div className="form-group">
+					<label>Электронная почта</label>
+					<input type="email" name="email" value={email} className="form-control" placeholder="example@mail.ru" />
+				</div>
+				<div className="form-group">
+					<label>Номер телефона</label>
+					<input type="tel" name="phone" value={phone} className="form-control" placeholder="8-987-654-32-10" />
+				</div>
 
-                <div className="col-sm">
-                  <label>Фамилия</label>
-                  <input type="text" className="form-control" placeholder="Иванов" style={{ minWidth: "125px" }} />
-                </div>
-
-                <div className="col-sm">
-                  <label>Имя</label>
-                  <input type="text" className="form-control" placeholder="Иван" style={{ minWidth: "125px" }} />
-                </div>
-
-                <div className="col-sm">
-                  <label>Отчество</label>
-                  <input type="text" className="form-control" placeholder="Иванович" style={{ minWidth: "125px" }} />
-                </div>
-              </div>
-            </div>
-
-            <div className="row justify-content-around align-items-center pl-3 pr-3 mb-4">
-              <div className="row">
-
-                <div className="col-sm">
-                  <label>Электронная почта</label>
-                  <input type="email" className="form-control" placeholder="example@mail.ru" style={{ minWidth: "125px" }} />
-                </div>
-
-                <div className="col-sm">
-                  <label>Номер телефона</label>
-                  <input type="tel" className="form-control" placeholder="8-987-654-32-10" style={{ minWidth: "125px" }} />
-                </div>
-              </div>
-            </div>
-
-            <hr />
-
-            <div className="row justify-content-center">
-              <button type="button" className="btn btn-danger">Сохранить</button>
-            </div>
-          </form>
-
-        </div>
-
-      </div>
-    );
-  }
-}
+				<div className="row justify-content-center">
+					<button type="button" className="btn btn-danger">
+						Сохранить
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+);
 
 export default Settings;

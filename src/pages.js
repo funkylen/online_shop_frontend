@@ -9,7 +9,7 @@ import AddProductPage from './containers/Account/AddProductPage';
 import AddCategoryPage from './containers/Account/AddCategoryPage';
 import BasketPage from './containers/Account/BasketPage';
 import OrdersPage from './containers/Account/OrdersPage';
-import { SettingsPage } from './containers/Account/AccountPage';
+import SettingsPage from './containers/Account/SettingsPage';
 import SearchPage from './containers/SearchPage';
 
 export const index = () => <HomePage />;
