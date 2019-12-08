@@ -8,7 +8,8 @@ import RegisterPage from './containers/RegisterPage';
 import AddProductPage from './containers/Account/AddProductPage';
 import AddCategoryPage from './containers/Account/AddCategoryPage';
 import BasketPage from './containers/Account/BasketPage';
-import { OrdersPage, SettingsPage } from './containers/Account/AccountPage';
+import OrdersPage from './containers/Account/OrdersPage';
+import { SettingsPage } from './containers/Account/AccountPage';
 import SearchPage from './containers/SearchPage';
 
 export const index = () => <HomePage />;
