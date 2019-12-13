@@ -13,9 +13,6 @@ class CategoryPage extends React.Component {
 			currentPage: null,
 			lastPage: null,
 		};
-
-		this.getNextPageData = this.getNextPageData.bind(this);
-		this.getPreviousPageData = this.getPreviousPageData.bind(this);
 	}
 
 	getCategory(id, page) {
@@ -30,12 +27,12 @@ class CategoryPage extends React.Component {
 			.catch((err) => this.setState({ categoryProducts: null }));
 	}
 
-	getPreviousPageData() {
+	getPreviousPageData = () => {
 		if (this.state.currentPage === 1) return;		
 		this.getCategory(this.props.id, this.state.currentPage - 1)
 	}
 
-	getNextPageData() {
+	getNextPageData = () => {
 		if (this.state.currentPage === this.state.lastPage) return;
 		this.getCategory(this.props.id, this.state.currentPage + 1);
 	}

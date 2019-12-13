@@ -14,8 +14,6 @@ class SearchPage extends React.Component {
 			lastPage: null,
 			currentPage: null
 		};
-
-		this.getMoreProducts = this.getMoreProducts.bind(this);
 	}
 
 	getProducts(search) {
@@ -31,7 +29,7 @@ class SearchPage extends React.Component {
 		);
 	}
 
-	getMoreProducts() {
+	getMoreProducts = () => {
 		api.searchProducts(this.state.searchText, this.state.currentPage + 1).then((response) => {
 			const newProducts = response.data.data;
 			const products = this.state.products.concat(newProducts);

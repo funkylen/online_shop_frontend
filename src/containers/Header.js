@@ -13,22 +13,19 @@ class Header extends React.Component {
 			categories: [],
 			search: ''
 		};
-
-		this.handleSearchSubmit = this.handleSearchSubmit.bind(this);
-		this.handleChange = this.handleChange.bind(this);
 	}
 
 	componentDidMount() {
 		api.getCategories().then((response) => this.setState({ categories: response.data }));
 	}
 
-	handleSearchSubmit(e) {
+	handleSearchSubmit = (e) => {
 		e.preventDefault();
 		const searchText = this.state.search.trim();
 		if (searchText) this.props.history.push(`/search?name=${searchText}`);
 	}
 
-	handleChange(e) {
+	handleChange = (e) => {
 		handleChange(e, this);
 	}
 

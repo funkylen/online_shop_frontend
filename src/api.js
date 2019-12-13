@@ -1,8 +1,8 @@
 import axios from 'axios';
 import * as auth from './services/auth';
 
-axios.defaults.baseURL = 'https://youngview.herokuapp.com/api';
-// axios.defaults.baseURL = 'http://localhost:8080/api';
+// axios.defaults.baseURL = 'https://youngview.herokuapp.com/api';
+axios.defaults.baseURL = 'http://localhost:8080/api';
 
 axios.defaults.headers.common = auth.loggedIn()
 	? {

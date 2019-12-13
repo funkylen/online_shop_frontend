@@ -2,17 +2,19 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 class AddProduct extends React.Component {
-	constructor(props) {
-    super(props);
-    
-		this.getImageInput = this.getImageInput.bind(this);
-	}
+	getImageInput = () => {
+		let type, onChange, className;
 
-	getImageInput() {
-		const type = this.props.imageInput === 'url' ? 'text' : 'file';
-		const onChange = this.props.imageInput === 'url' ? this.props.handleChange : this.props.handleImageChange;
-
-		let className = this.props.imageInput === 'url' ? 'form-control' : 'form-control-file mt-1';
+		if (this.props.imageInput === 'url' ) {
+			type = 'text';
+			onChange = this.props.handleChange;
+			className = 'form-control';
+		} else {
+			type = 'file';
+			onChange = this.props.handleImageChange;
+			className = 'form-control-file mt-1';
+		}
+		
 		if (this.props.errors.image_file || this.props.errors.image_url) className += ' is-invalid';
 
 		return <input onChange={onChange} type={type} name='image' className={className} />;

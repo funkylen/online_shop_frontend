@@ -14,20 +14,13 @@ class AddProductPage extends React.Component {
 			price: '',
 			categoryId: '',
 			description: '',
-			image: null,
+			image: '',
 			imageInput: 'url',
 			errors: {},
 			success: false,
 			successName: null,
 			successId: null
 		};
-
-		this.fd = new FormData();
-
-		this.handleSubmit = this.handleSubmit.bind(this);
-		this.handleChange = this.handleChange.bind(this);
-		this.handleImageChange = this.handleImageChange.bind(this);
-		this.handleChangeImageInput = this.handleChangeImageInput.bind(this);
 	}
 
 	componentDidMount() {
@@ -45,14 +38,14 @@ class AddProductPage extends React.Component {
 		});
 	}
 
-	handleChangeImageInput(e) {
+	handleChangeImageInput = (e) => {
 		this.setState({
 			imageInput: e.target.value,
 			image: null
 		});
 	}
 
-	handleSubmit(e) {
+	handleSubmit = (e) => {
 		e.preventDefault();
 		this.setState({ success: false });
 		const { name, price, categoryId, description, imageInput, image } = this.state;
@@ -68,11 +61,11 @@ class AddProductPage extends React.Component {
 			});
 	}
 
-	handleImageChange(e) {
+	handleImageChange = (e) => {
 		this.setState({ image: e.target.files[0] });
 	}
 
-	handleChange(e) {
+	handleChange = (e) => {
 		handleChange(e, this);
 	}
 

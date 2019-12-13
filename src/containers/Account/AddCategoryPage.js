@@ -14,12 +14,9 @@ class AddCategoryPage extends React.Component {
 			success: false,
 			successName: null
 		};
-
-		this.handleSubmit = this.handleSubmit.bind(this);
-		this.handleChange = this.handleChange.bind(this);
 	}
 
-	handleSubmit(e) {
+	handleSubmit = (e) =>  {
 		e.preventDefault();
 		this.setState({ success: false });
 		api
@@ -28,7 +25,7 @@ class AddCategoryPage extends React.Component {
 			.catch((error) => this.setState({ errors: error.response.data.errors }));
 	}
 
-	handleChange(e) {
+	handleChange = (e) => {
 		handleChange(e, this);
 	}
 

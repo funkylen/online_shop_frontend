@@ -18,8 +18,6 @@ class OrdersPage extends React.Component {
 			success: false,
 			errors: {}
 		};
-		this.handleChange = this.handleChange.bind(this);
-		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
 	componentDidMount() {
@@ -33,11 +31,11 @@ class OrdersPage extends React.Component {
 		);
 	}
 
-	handleChange(e) {
+	handleChange = (e) => {
 		handleChange(e, this);
 	}
 
-	handleSubmit(e) {
+	handleSubmit = (e) => {
 		e.preventDefault();
 
 		api

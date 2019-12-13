@@ -10,10 +10,9 @@ class BasketProductCard extends React.Component {
 		this.state = {
 			count: this.props.count
 		};
-		this.handleChange = this.handleChange.bind(this);
 	}
 
-	handleChange(e) {
+	handleChange = (e) => {
 		basket.addItem(this.props.id, e.target.value);
 
 		if (e.target.value > 0) this.setState({ count: e.target.value });

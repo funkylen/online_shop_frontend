@@ -13,16 +13,13 @@ class LoginPage extends React.Component {
 			password: '',
 			error: ''
 		};
-
-		this.handleChange = this.handleChange.bind(this);
-		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
-	handleChange(e) {
+	handleChange = (e) => {
 		handleChange(e, this);
 	}
 
-	handleSubmit(e) {
+	handleSubmit = (e) => {
 		e.preventDefault();
 		api
 			.login(this.state.email, this.state.password)

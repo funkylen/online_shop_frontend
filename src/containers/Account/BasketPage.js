@@ -14,9 +14,6 @@ export class BasketPage extends React.Component {
 			loading: true,
 			orderSuccess: false
 		};
-
-		this.removeItem = this.removeItem.bind(this);
-		this.makeOrder = this.makeOrder.bind(this);
 	}
 
 	componentDidMount() {
@@ -35,14 +32,14 @@ export class BasketPage extends React.Component {
 		this.setState({ loading: false });
 	}
 
-	makeOrder() {
+	makeOrder = () => {
 		api.makeOrder(basket.get()).then(() => {
 			this.setState({ orderSuccess: true, products: [] });
 			basket.clear();
 		});
 	}
 
-	removeItem(id) {
+	removeItem = (id) => {
 		basket.removeItem(id);
 
 		const products = this.state.products;
