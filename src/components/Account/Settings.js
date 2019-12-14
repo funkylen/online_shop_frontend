@@ -3,7 +3,7 @@ import React from 'react';
 class Settings extends React.Component {
   render() {
     return (
-      <div className="card mt-1" style={{minWidth:"200px"}}>
+      <div className="card mt-1" style={{ minWidth: "200px" }}>
         <div className="card-body">
           <h5 className="card-title">Мои данные</h5>
 
@@ -47,6 +47,13 @@ class Settings extends React.Component {
 
             <div className="row justify-content-center">
               <button type="button" className="btn btn-danger">Сохранить</button>
+            </div>
+
+            <div className="alert alert-warning alert-dismissible fade show" role="alert">
+              <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+  <button type="button" className="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
             </div>
           </form>
 
